@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="https://felizcomreiki.com.br/wp-content/uploads/2021/12/LOGO-QUADRADO-PEQUENO-150X150.png" />
+  <title>Curso de Reiki Nível 2 | Feliz com Reiki</title>
+  <meta name="description" content="Aprofunde sua prática no Curso de Reiki Nível 2 com símbolos sagrados, Reiki à distância, linhagens Usui Reiki Ryoho, Reiki Essencial Tibetano e Holy Fire®, com acompanhamento e certificado." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Lato', 'sans-serif'],
+          },
+          colors: {
+            reiki: {
+              primary: '#4682B4',
+              support: '#F0F8FF',
+              deep: '#2E5F88',
+              darker: '#17364E',
+              soft: '#F8FCFF',
+              gold: '#9AB8D4',
+              text: '#22384B'
+            }
+          },
+          boxShadow: {
+            soft: '0 18px 45px rgba(46, 95, 136, 0.12)',
+            glow: '0 22px 70px rgba(70, 130, 180, 0.28)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      color: #22384B;
+      background:
+        radial-gradient(circle at top left, rgba(70,130,180,0.20), transparent 34rem),
+        radial-gradient(circle at 92% 14%, rgba(154,184,212,0.24), transparent 28rem),
+        linear-gradient(180deg, #F8FCFF 0%, #F0F8FF 46%, #F8FCFF 100%);
+    }
+
+    .font-serif { font-family: 'Playfair Display', serif; }
+
+    .energy-pattern {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .energy-pattern::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 18% 24%, rgba(70,130,180,0.12) 0 2px, transparent 2px),
+        radial-gradient(circle at 78% 20%, rgba(70,130,180,0.09) 0 3px, transparent 3px),
+        radial-gradient(circle at 32% 80%, rgba(154,184,212,0.12) 0 2px, transparent 2px),
+        linear-gradient(120deg, transparent 0%, rgba(70,130,180,0.05) 35%, transparent 70%);
+      background-size: 110px 110px, 150px 150px, 130px 130px, 100% 100%;
+      pointer-events: none;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.74);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.82);
+    }
+
+    .btn-primary {
+      background: #4682B4;
+      color: #ffffff;
+      transition: all 0.25s ease;
+      box-shadow: 0 14px 30px rgba(70,130,180,0.32);
+    }
+
+    .btn-primary:hover {
+      background: #3A709D;
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px rgba(70,130,180,0.40);
+    }
+
+    .btn-soft {
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(70,130,180,0.24);
+      transition: all 0.25s ease;
+    }
+
+    .btn-soft:hover {
+      background: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(46,95,136,0.12);
+    }
+
+    .section-kicker {
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #2E5F88;
+      font-weight: 900;
+      font-size: 0.78rem;
+    }
+
+    .module-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .module-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 45px rgba(46,95,136,0.14);
+      border-color: rgba(70,130,180,0.48);
+    }
+
+    .faq-answer {
+      display: none;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .whatsapp-float {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(18px) scale(0.96);
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-float.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+
+    .whatsapp-label {
+      margin-top: 0.45rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 0.35rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      line-height: 1.1;
+      color: #17364E;
+      text-align: center;
+      box-shadow: 0 10px 24px rgba(46, 95, 136, 0.16);
+      white-space: nowrap;
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+  <!-- BLOCO 01: HERO - A PROMESSA -->
+  <header class="energy-pattern relative">
+    <div class="relative mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 md:grid-cols-2 md:py-24 lg:px-8">
+      <div data-aos="fade-right">
+        <p class="mb-4 inline-flex rounded-full border border-reiki-primary/35 bg-white/70 px-4 py-2 text-sm font-bold uppercase tracking-[0.22em] text-reiki-deep">
+          Curso de Reiki Nível 2 • Usui Reiki Ryoho • Tibetano • Holy Fire®
+        </p>
+
+        <h1 class="font-serif text-4xl font-bold leading-tight text-reiki-text md:text-5xl lg:text-6xl">
+          Expanda sua prática com mais profundidade, propósito e confiança para transformar vidas.
+        </h1>
+
+        <p class="mt-6 text-lg leading-8 text-reiki-text/80 md:text-xl">
+          No Nível 2, você aprende os símbolos sagrados, amplia significativamente a energia canalizada e descobre como aplicar Reiki à distância para pessoas, situações, passado e futuro, unindo tradição, expansão energética e consciência espiritual.
+        </p>
+
+        <div class="mt-8 grid gap-3 sm:grid-cols-3">
+          <div class="rounded-2xl bg-white/70 p-4 shadow-soft">
+            <p class="text-2xl">🔹</p>
+            <p class="mt-2 text-sm font-bold text-reiki-text">Símbolos sagrados</p>
+          </div>
+          <div class="rounded-2xl bg-white/70 p-4 shadow-soft">
+            <p class="text-2xl">🌍</p>
+            <p class="mt-2 text-sm font-bold text-reiki-text">Reiki à distância</p>
+          </div>
+          <div class="rounded-2xl bg-white/70 p-4 shadow-soft">
+            <p class="text-2xl">📜</p>
+            <p class="mt-2 text-sm font-bold text-reiki-text">Suporte e certificado</p>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a href="#checkout" class="btn-primary rounded-full px-8 py-4 text-center text-base font-bold">
+            Quero aprofundar minha prática
+          </a>
+          <a href="#modulos" class="btn-soft rounded-full px-8 py-4 text-center text-base font-bold text-reiki-deep">
+            Ver o que vou aprender
+          </a>
+        </div>
+
+        <p class="mt-5 text-sm leading-6 text-reiki-text/60">
+          Curso online, no seu ritmo, com acompanhamento para você praticar com mais clareza, sentir a energia com segurança e aplicar o Reiki de forma mais ampla.
+        </p>
+      </div>
+
+      <div class="relative" data-aos="fade-left">
+        <div class="absolute -left-6 -top-6 h-28 w-28 rounded-full bg-reiki-primary/20 blur-2xl"></div>
+        <div class="absolute -bottom-8 -right-6 h-36 w-36 rounded-full bg-reiki-primary/20 blur-3xl"></div>
+
+        <div class="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/60 p-3 shadow-glow backdrop-blur">
+          <img
+            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+            alt="Pessoa em meditação com atmosfera serena, representando expansão de consciência e conexão energética"
+            class="h-[430px] w-full rounded-[1.5rem] object-cover"
+          />
+        </div>
+
+        <div class="glass absolute -bottom-6 left-6 right-6 rounded-[1.5rem] p-5 shadow-soft">
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-reiki-deep">Virada de nível</p>
+          <p class="mt-2 text-base leading-7 text-reiki-text/80">
+            É aqui que muitos alunos passam a perceber a energia com mais clareza, confiança e resultados mais rápidos, trazendo o Reiki para a vida prática e para o cuidado com outras pessoas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- BLOCO 02: A CONEXÃO - O MOMENTO DO ALUNO -->
+    <section class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-5xl" data-aos="fade-up">
+        <div class="mx-auto max-w-4xl text-center">
+          <span class="section-kicker">O momento do aluno</span>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+            Você sente que já não quer mais viver o Reiki apenas de forma pessoal?
+          </h2>
+        </div>
+
+        <div class="mt-10 grid gap-8 md:grid-cols-[1fr_0.9fr] md:items-start">
+          <div class="space-y-6 rounded-[2rem] bg-white/75 p-8 text-lg leading-8 shadow-soft">
+            <p>
+              Você sente que chegou a hora de aprofundar o que aprendeu e usar o Reiki com mais alcance, consciência e presença? Talvez já tenha experimentado a autoaplicação, percebido mudanças importantes dentro de si e agora queira entender como ajudar outras pessoas de verdade, sem se sentir inseguro ou improvisando.
+            </p>
+            <p>
+              Você sente que sua prática pede mais clareza mental, mais equilíbrio emocional e uma conexão espiritual mais madura? O Reiki Nível 2 responde isso de forma direta e experiencial. É o nível em que o aprendizado deixa de ser apenas interno e passa a se tornar uma ferramenta ativa de transformação na sua vida, nos seus relacionamentos e no seu propósito.
+            </p>
+          </div>
+
+          <div class="rounded-[2rem] border border-reiki-primary/20 bg-reiki-support p-8 shadow-soft">
+            <h3 class="font-serif text-2xl font-bold text-reiki-text">Este curso é para você que deseja:</h3>
+            <ul class="mt-6 space-y-4 text-reiki-text/80">
+              <li class="flex gap-3"><span class="text-reiki-deep">✓</span><span>Aprender a trabalhar com os símbolos do Reiki com mais consciência e segurança.</span></li>
+              <li class="flex gap-3"><span class="text-reiki-deep">✓</span><span>Aplicar Reiki à distância em pessoas, situações e intenções de forma responsável.</span></li>
+              <li class="flex gap-3"><span class="text-reiki-deep">✓</span><span>Aprofundar sua conexão espiritual e perceber a energia com mais clareza.</span></li>
+              <li class="flex gap-3"><span class="text-reiki-deep">✓</span><span>Dar os primeiros passos para ajudar outras pessoas ou atuar como terapeuta com mais confiança.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 03: A SOLUÇÃO - O CURSO -->
+    <section id="curso" class="bg-white/70 px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-center">
+          <div data-aos="fade-right">
+            <div class="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/60 p-3 shadow-soft backdrop-blur">
+              <img
+                src="https://felizcomreiki.com.br/wp-content/uploads/2020/04/Capa-Manual-N%C3%ADvel-2-e1586095254302.png"
+                alt="Material do Curso de Reiki Nível 2 representando estudo guiado, aprofundamento e prática energética"
+                class="h-[420px] w-full rounded-[1.5rem] object-cover object-center"
+              />
+            </div>
+          </div>
+
+          <div data-aos="fade-left">
+            <span class="section-kicker">A solução</span>
+            <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+              Um curso estruturado para levar sua prática do Reiki a um novo patamar.
+            </h2>
+
+            <div class="mt-6 space-y-5 text-lg leading-8 text-reiki-text/80">
+              <p>
+                O Curso de Reiki Nível 2 foi pensado para quem deseja aprofundar o conhecimento técnico sem perder a essência espiritual do Reiki. Você estudará no seu tempo, com acompanhamento próximo, e aprenderá a aplicar os símbolos sagrados para ampliar o fluxo energético e trabalhar com mais intenção e clareza.
+              </p>
+              <p>
+                A formação integra <strong>Usui Reiki Ryoho</strong>, <strong>Reiki Essencial Tibetano</strong> e <strong>Holy Fire®</strong>, oferecendo uma experiência que honra a tradição, expande a consciência e fortalece sua autenticidade como canalizador de energia.
+              </p>
+              <p>
+                Ao longo do percurso, você compreende o Reiki à distância, aprofunda técnicas complementares, fortalece a percepção energética e ganha mais confiança para usar o Reiki na vida prática, nos relacionamentos e no cuidado com outras pessoas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-4">
+          <div class="rounded-[2rem] border border-reiki-primary/20 bg-reiki-support p-6 shadow-soft" data-aos="fade-up">
+            <p class="text-3xl">1</p>
+            <h3 class="mt-3 font-serif text-xl font-bold">Acompanhamento personalizado</h3>
+            <p class="mt-3 text-sm leading-6 text-reiki-text/70">Kátia acompanha sua jornada para que você pratique com mais confiança e transforme teoria em vivência.</p>
+          </div>
+          <div class="rounded-[2rem] border border-reiki-primary/20 bg-reiki-support p-6 shadow-soft" data-aos="fade-up" data-aos-delay="80">
+            <p class="text-3xl">2</p>
+            <h3 class="mt-3 font-serif text-xl font-bold">Prática no seu ritmo</h3>
+            <p class="mt-3 text-sm leading-6 text-reiki-text/70">Você acessa o conteúdo online de onde estiver e pode revisitar as aulas sempre que precisar.</p>
+          </div>
+          <div class="rounded-[2rem] border border-reiki-primary/20 bg-reiki-support p-6 shadow-soft" data-aos="fade-up" data-aos-delay="160">
+            <p class="text-3xl">3</p>
+            <h3 class="mt-3 font-serif text-xl font-bold">Símbolos e expansão</h3>
+            <p class="mt-3 text-sm leading-6 text-reiki-text/70">Aprenda a usar os símbolos com intenção, potência e responsabilidade para ampliar seus resultados.</p>
+          </div>
+          <div class="rounded-[2rem] border border-reiki-primary/20 bg-reiki-support p-6 shadow-soft" data-aos="fade-up" data-aos-delay="240">
+            <p class="text-3xl">4</p>
+            <h3 class="mt-3 font-serif text-xl font-bold">Certificado de conclusão</h3>
+            <p class="mt-3 text-sm leading-6 text-reiki-text/70">Ao concluir o processo, você recebe seu certificado e segue com uma base mais sólida para praticar.</p>
+          </div>
+        </div>
+
+        <div id="modulos" class="mt-16" data-aos="fade-up">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="section-kicker">O que você vai aprender</span>
+            <h3 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-4xl">
+              Um percurso claro para ampliar sua energia, sua percepção e sua capacidade de servir.
+            </h3>
+          </div>
+
+          <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Introdução ao Nível 2</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Entenda a transição do nível pessoal para uma prática mais expansiva, consciente e aplicada.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Os pilares do Reiki</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Aprofunde Gassho, Reiji-Ho e Chiryo como fundamentos para uma prática mais centrada e autêntica.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Os símbolos sagrados</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Aprenda Cho Ku Rei, Sei He Ki e Hon Sha Ze Sho Nen com clareza de função e aplicação prática.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Reiki à distância</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Descubra como enviar Reiki para pessoas, situações e intenções com mais segurança, foco e estrutura.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Tratamentos não presenciais</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Veja modelos de atendimento e exemplos práticos para organizar sessões energéticas à distância.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Posições extras das mãos</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Amplie sua prática com novas formas de aplicação para tornar o cuidado mais completo.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Reiki em animais e outras aplicações</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Explore maneiras de levar o Reiki a diferentes contextos da vida com sensibilidade e responsabilidade.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Percepção energética</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Vivencie técnicas como Byosen-Reikan-Ho para refinar sua leitura energética e sua presença durante a prática.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Enraizamento e limpeza</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Fortaleça sua base energética com técnicas de enraizamento, banho seco e cuidado no processo de purificação.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Tratamentos complementares</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Aprenda Hesso Chiryo Ho, Tanden-Chiryo-Ho, Ketsueki-kokan-ho e outras técnicas de apoio à prática.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Proteção e limpeza energética</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Conheça recursos como Jaki-kiri-jhoka-ho e outras formas de lidar com energia densa com mais equilíbrio.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Confiança para servir</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Transforme o conhecimento em prática consistente, clara e alinhada com seu propósito.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 04: TRANSFORMAÇÃO 360º -->
+    <section class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+          <span class="section-kicker">Transformação 360º</span>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+            O Nível 2 aprofunda a técnica e também reorganiza a forma como você vive sua energia.
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-reiki-text/75">
+            A prática ganha profundidade, alcance e propósito, ajudando você a integrar o Reiki com mais maturidade no corpo, na mente e na vida espiritual.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <article class="rounded-[2rem] border border-reiki-primary/20 bg-white/75 p-8 shadow-soft" data-aos="fade-up">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-reiki-support text-3xl">🌊</div>
+            <h3 class="font-serif text-2xl font-bold text-reiki-text">Físico</h3>
+            <p class="mt-4 leading-7 text-reiki-text/75">
+              Aprofundar a prática pode favorecer mais relaxamento, presença e constância no autocuidado, além de tornar as aplicações mais organizadas e conscientes.
+            </p>
+          </article>
+
+          <article class="rounded-[2rem] border border-reiki-primary/20 bg-white/75 p-8 shadow-soft" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-reiki-support text-3xl">🕊️</div>
+            <h3 class="font-serif text-2xl font-bold text-reiki-text">Mental e Emocional</h3>
+            <p class="mt-4 leading-7 text-reiki-text/75">
+              Muitos alunos relatam mais clareza mental, maior equilíbrio emocional e uma percepção mais nítida dos próprios padrões, relações e escolhas.
+            </p>
+          </article>
+
+          <article class="rounded-[2rem] border border-reiki-primary/20 bg-white/75 p-8 shadow-soft" data-aos="fade-up" data-aos-delay="200">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-reiki-support text-3xl">✨</div>
+            <h3 class="font-serif text-2xl font-bold text-reiki-text">Espiritual</h3>
+            <p class="mt-4 leading-7 text-reiki-text/75">
+              O curso fortalece a expansão de consciência, a intuição e a sensação real de propósito, tornando o Reiki uma expressão viva da sua autenticidade.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 05: QUEM É A MESTRA KÁTIA MACIEL? -->
+    <section class="bg-reiki-support px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+          <div data-aos="fade-right">
+            <span class="section-kicker">Sua mentora</span>
+            <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+              Quem é a Mestra Kátia Maciel?
+            </h2>
+
+            <div class="mt-6 space-y-5 text-lg leading-8 text-reiki-text/80">
+              <p>
+                Kátia Maciel é Mestra de Reiki, terapeuta holística credenciada pela ABRATH, criadora do Feliz com Reiki, autora dos livros <strong>Combine Reiki com Outras Terapias</strong> e <strong>O Segredo dos Chakras para a Abundância</strong>, além de estudar profundamente Reiki e terapias energéticas há mais de 15 anos.
+              </p>
+              <p>
+                Sua forma de ensinar combina acolhimento, autoridade técnica e espiritualidade aplicada. No Nível 2, isso faz diferença porque é justamente aqui que surgem dúvidas sobre símbolos, Reiki à distância, percepção energética e como levar a prática para além do campo pessoal.
+              </p>
+              <p>
+                Você não recebe apenas conteúdo. Você recebe mentoria, direção e uma presença que ajuda a transformar expansão de consciência em prática real, com Compaixão em Ação.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass rounded-[2rem] p-8 shadow-soft" data-aos="fade-left">
+            <div class="flex flex-col items-center gap-5 text-center">
+              <img src="https://felizcomreiki.com.br/wp-content/uploads/2023/06/katia-oracao-300x300-1.jpg" alt="Kátia Maciel" class="h-64 w-64 rounded-[2rem] object-cover shadow-soft md:h-80 md:w-80" loading="lazy">
+              <blockquote class="font-serif text-2xl font-bold leading-9 text-reiki-text">
+                “Eu estarei com você para que sua prática se torne mais profunda, confiante e alinhada com a sua missão.”
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 06: LINHAGENS E EXPANSÃO -->
+    <section class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-5xl" data-aos="fade-up">
+        <div class="rounded-[2.5rem] border border-reiki-gold/30 bg-gradient-to-br from-white/80 to-reiki-support/50 p-8 md:p-12" style="background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,248,255,0.78) 100%);">
+          <div class="text-center">
+            <span class="section-kicker">A base do curso</span>
+            <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+              Tradição, expansão energética e consciência espiritual no mesmo caminho
+            </h2>
+            <p class="mt-4 text-lg leading-8 text-reiki-text/80">
+              O conteúdo do Nível 2 integra diferentes abordagens para que você compreenda a técnica com profundidade e pratique com autenticidade.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <div class="relative overflow-hidden rounded-[2rem] border-2 border-reiki-primary/25 bg-white/90 p-8 shadow-soft">
+              <div class="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-reiki-primary/10 blur-2xl"></div>
+              <div class="relative">
+                <div class="inline-flex rounded-full bg-reiki-primary/15 px-4 py-1.5 text-sm font-bold uppercase tracking-[0.15em] text-reiki-deep">
+                  Usui Reiki Ryoho
+                </div>
+                <h3 class="mt-4 font-serif text-2xl font-bold text-reiki-text">A linhagem tradicional</h3>
+                <p class="mt-4 leading-7 text-reiki-text/80">
+                  Uma base sólida para compreender o Reiki com respeito à tradição, aos símbolos e à prática séria.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-[2rem] border-2 border-reiki-primary/25 bg-white/90 p-8 shadow-soft">
+              <div class="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-reiki-primary/10 blur-2xl"></div>
+              <div class="relative">
+                <div class="inline-flex rounded-full bg-reiki-primary/15 px-4 py-1.5 text-sm font-bold uppercase tracking-[0.15em] text-reiki-deep">
+                  Tibetano Essencial
+                </div>
+                <h3 class="mt-4 font-serif text-2xl font-bold text-reiki-text">Expansão de percepção</h3>
+                <p class="mt-4 leading-7 text-reiki-text/80">
+                  Técnicas e vivências que ampliam sua sensibilidade energética e ajudam a tornar a prática mais viva.
+                </p>
+              </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-[2rem] border-2 border-reiki-primary/25 bg-white/90 p-8 shadow-soft">
+              <div class="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-reiki-primary/10 blur-2xl"></div>
+              <div class="relative">
+                <div class="inline-flex rounded-full bg-reiki-primary/15 px-4 py-1.5 text-sm font-bold uppercase tracking-[0.15em] text-reiki-deep">
+                  Holy Fire®
+                </div>
+                <h3 class="mt-4 font-serif text-2xl font-bold text-reiki-text">Reiki mais moderno</h3>
+                <p class="mt-4 leading-7 text-reiki-text/80">
+                  Uma frequência apresentada no curso como refinamento energético para apoiar sua canalização e sua expansão de consciência.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 07: CTA - O CONVITE -->
+    <section id="checkout" class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-5xl rounded-[2.5rem] border border-reiki-primary/25 bg-white/80 p-8 text-center shadow-soft md:p-12" data-aos="zoom-in">
+        <span class="font-bold uppercase tracking-[0.22em] text-reiki-deep">O convite</span>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+          Faça do Reiki uma ferramenta ativa de transformação na sua vida.
+        </h2>
+        <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-reiki-text/80">
+          Se você está pronto para aprofundar sua prática, ampliar sua energia e viver o Reiki com mais clareza, propósito e confiança, esse é o próximo passo.
+        </p>
+
+        <div class="mx-auto mt-10 max-w-md">
+          <div id="checkout-loading" class="rounded-[2rem] bg-reiki-support p-8">
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-reiki-deep">Preparando seu checkout...</p>
+          </div>
+
+          <div id="checkout-br" class="hidden rounded-[2rem] border border-reiki-primary/25 bg-reiki-support p-8">
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-reiki-deep">Para Brasil</p>
+            <p class="mt-4 font-serif text-5xl font-bold text-reiki-text">R$ 597</p>
+            <a href="https://felizcomreiki.com.br/reiki-2-mr" class="btn-primary mt-6 block rounded-full px-8 py-4 text-base font-bold">
+              Quero me inscrever agora
+            </a>
+          </div>
+
+          <div id="checkout-eu" class="hidden rounded-[2rem] border border-reiki-primary/25 bg-reiki-support p-8">
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-reiki-deep">Para Europa e demais países</p>
+            <p class="mt-4 font-serif text-5xl font-bold text-reiki-text">€ 167</p>
+            <a href="https://felizcomreiki.com.br/reiki-2-me" class="btn-primary mt-6 block rounded-full px-8 py-4 text-base font-bold">
+              Quero me inscrever agora
+            </a>
+          </div>
+        </div>
+
+        <p class="mt-6 text-sm leading-6 text-reiki-text/60">
+          O Reiki é uma prática integrativa de bem-estar e autoconhecimento. Não substitui acompanhamento médico, psicológico ou terapêutico quando necessário.
+        </p>
+      </div>
+    </section>
+
+    <!-- BLOCO 08: PERGUNTAS FREQUENTES -->
+    <section class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-5xl">
+        <div class="rounded-[2.5rem] bg-white/75 p-8 shadow-soft md:p-10" data-aos="fade-up">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="section-kicker">Perguntas frequentes</span>
+            <h3 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-4xl">
+              O que você precisa saber antes de entrar.
+            </h3>
+          </div>
+
+          <div class="mx-auto mt-10 max-w-4xl space-y-4">
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">Preciso já ter feito o Reiki Nível 1?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75">
+                Sim. O Nível 2 é uma continuação natural da jornada, então é importante já ter passado pelo Reiki Nível 1 para aproveitar melhor os símbolos e as técnicas deste curso.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">Vou aprender Reiki à distância?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75">
+                Sim. Esse é um dos grandes aprofundamentos do Nível 2: você aprende a enviar Reiki para pessoas, situações e intenções com mais estrutura e clareza.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">Os símbolos são ensinados no curso?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75">
+                Sim. Você aprende os símbolos sagrados do nível, compreendendo suas funções e formas de aplicação dentro da prática energética.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">Receberei certificado?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75">
+                Sim. Após concluir o processo do curso, você recebe seu certificado.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">Esse curso ajuda quem quer atender outras pessoas?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75">
+                Sim. Muitos alunos relatam que este nível traz mais segurança para começar a aplicar Reiki em outras pessoas e dar os primeiros passos como terapeutas.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">O Reiki substitui tratamentos de saúde?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75">
+                Não. O Reiki é uma prática complementar de bem-estar e autoconhecimento e não substitui tratamentos médicos, psicológicos ou terapêuticos.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div
+    id="whatsappButton"
+    class="whatsapp-float fixed bottom-24 right-6 z-50 flex flex-col items-center"
+  >
+    <a
+      href="https://wa.me/31657854330?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Curso%20de%20Reiki%20N%C3%ADvel%202%20da%20K%C3%A1tia..."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar com suporte pelo WhatsApp"
+      class="flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+        <path d="M16.04 3C9.43 3 4.06 8.35 4.06 14.93c0 2.1.55 4.15 1.6 5.95L4 29l8.33-1.63a12.05 12.05 0 0 0 5.72 1.45h.01C24.66 28.82 30 23.47 30 16.89 30 10.34 22.65 3 16.04 3Zm7.03 17.1c-.3.84-1.74 1.6-2.4 1.7-.62.09-1.4.13-2.25-.14-.52-.16-1.18-.38-2.03-.75-3.57-1.54-5.9-5.12-6.08-5.36-.18-.24-1.45-1.92-1.45-3.66 0-1.74.92-2.6 1.25-2.95.33-.36.72-.45.96-.45h.69c.22 0 .52-.08.81.62.3.72 1.03 2.5 1.12 2.68.09.18.15.39.03.63-.12.24-.18.39-.36.6-.18.21-.38.47-.54.63-.18.18-.37.38-.16.74.21.36.94 1.54 2.02 2.5 1.39 1.24 2.56 1.62 2.92 1.8.36.18.57.15.78-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.69.42.09.15.09.87-.21 1.71Z"/>
+      </svg>
+    </a>
+    <span class="whatsapp-label">Dúvidas? clique aqui</span>
+  </div>
+
+  <footer class="border-t border-reiki-primary/20 px-6 py-8 text-center text-xs text-gray-500">
+    <div class="mx-auto max-w-6xl">
+      <p class="mb-3">© <span id="year"></span> Feliz com Reiki. Todos os direitos reservados.</p>
+      <p class="leading-6">
+        <a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/politica-de-privacidade/">Políticas de privacidade</a>
+        <span> | </span>
+        <a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/termos-de-uso/">Termos de uso</a>
+        <span> | </span>
+        <a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/aviso-legal/">Aviso Legal</a>
+        <span> | </span>
+        <a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/politica-de-privacidade/">Políticas de Cookies do Site</a>
+        <span> | </span>
+        <a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/contato/">Contato</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 750,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 80
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const whatsappButton = document.getElementById('whatsappButton');
+
+    function toggleWhatsAppButton() {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = docHeight > 0 ? scrollTop / docHeight : 0;
+
+      if (scrollPercent >= 0.7) {
+        whatsappButton.classList.add('show');
+      } else {
+        whatsappButton.classList.remove('show');
+      }
+    }
+
+    window.addEventListener('scroll', toggleWhatsAppButton, { passive: true });
+
+    document.querySelectorAll('.faq-question').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        item.classList.toggle('open');
+      });
+    });
+
+    const checkoutBR = document.getElementById('checkout-br');
+    const checkoutEU = document.getElementById('checkout-eu');
+    const checkoutLoading = document.getElementById('checkout-loading');
+
+    function showCheckout(countryCode) {
+      checkoutLoading.classList.add('hidden');
+
+      if (countryCode === 'BR') {
+        checkoutBR.classList.remove('hidden');
+        checkoutEU.classList.add('hidden');
+      } else {
+        checkoutEU.classList.remove('hidden');
+        checkoutBR.classList.add('hidden');
+      }
+    }
+
+    async function getCountryFromCloudflare() {
+      const response = await fetch('https://cloudflare.com/cdn-cgi/trace', { cache: 'no-store' });
+      if (!response.ok) throw new Error('Cloudflare trace unavailable');
+
+      const text = await response.text();
+      const lines = text.split('\n');
+      const locationLine = lines.find((line) => line.startsWith('loc='));
+      if (!locationLine) throw new Error('Country not found in Cloudflare trace');
+
+      return locationLine.replace('loc=', '').trim();
+    }
+
+    async function getCountryFromIpApi() {
+      const response = await fetch('https://ipapi.co/json/', { cache: 'no-store' });
+      if (!response.ok) throw new Error('ipapi fallback unavailable');
+
+      const data = await response.json();
+      return data && data.country_code ? data.country_code : 'EU';
+    }
+
+    async function detectCountryAndShowCheckout() {
+      try {
+        const country = await getCountryFromCloudflare();
+        showCheckout(country);
+      } catch (cloudflareError) {
+        try {
+          const country = await getCountryFromIpApi();
+          showCheckout(country);
+        } catch (ipapiError) {
+          showCheckout('EU');
+        }
+      }
+    }
+
+    detectCountryAndShowCheckout();
+    toggleWhatsAppButton();
+  </script>
+</body>
+</html>
