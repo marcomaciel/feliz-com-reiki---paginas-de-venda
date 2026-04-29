@@ -110,6 +110,34 @@
       transform: translateY(-2px);
     }
 
+    .course-actions {
+      display: grid;
+      gap: 0.75rem;
+      width: 100%;
+    }
+
+    .course-actions .action-button {
+      width: 100%;
+      min-width: 0;
+    }
+
+    @media (min-width: 640px) {
+      .course-actions {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 768px) {
+      .course-actions {
+        width: auto;
+        grid-template-columns: 1fr;
+      }
+
+      .course-actions .action-button {
+        min-width: 11.5rem;
+      }
+    }
+
     .wa-button {
       transition: transform 0.22s ease, box-shadow 0.22s ease;
     }
@@ -167,7 +195,7 @@
                 </div>
               </div>
 
-              <div class="relative z-10 flex items-center gap-3 md:flex-col">
+              <div class="course-actions relative z-10">
                 <a
                   href="../curso-reiki-nivel-1/"
                   class="action-button inline-flex min-w-[11.5rem] items-center justify-center gap-2 rounded-full bg-[#4F7F4F] px-5 py-3 text-sm font-bold text-white shadow-lg"
@@ -221,7 +249,7 @@
                 </div>
               </div>
 
-              <div class="relative z-10 flex items-center gap-3 md:flex-col">
+              <div class="course-actions relative z-10">
                 <a
                   href="../curso-reiki-nivel-2/"
                   class="action-button inline-flex min-w-[11.5rem] items-center justify-center gap-2 rounded-full bg-[#2E5F88] px-5 py-3 text-sm font-bold text-white shadow-lg"
@@ -275,7 +303,7 @@
                 </div>
               </div>
 
-              <div class="relative z-10 flex items-center gap-3 md:flex-col">
+              <div class="course-actions relative z-10">
                 <a
                   href="../curso-reiki-nivel-3a/"
                   class="action-button inline-flex min-w-[11.5rem] items-center justify-center gap-2 rounded-full bg-[#6D4FB2] px-5 py-3 text-sm font-bold text-white shadow-lg"
@@ -329,7 +357,7 @@
                 </div>
               </div>
 
-              <div class="relative z-10 flex items-center gap-3 md:flex-col">
+              <div class="course-actions relative z-10">
                 <a
                   href="../curso-karuna-nivel-1/"
                   class="action-button inline-flex min-w-[11.5rem] items-center justify-center gap-2 rounded-full bg-[#AF6E6E] px-5 py-3 text-sm font-bold text-white shadow-lg"
@@ -383,7 +411,7 @@
                 </div>
               </div>
 
-              <div class="relative z-10 flex items-center gap-3 md:flex-col">
+              <div class="course-actions relative z-10">
                 <a
                   href="../curso-karuna-nivel-2/"
                   class="action-button inline-flex min-w-[11.5rem] items-center justify-center gap-2 rounded-full bg-[#7A217A] px-5 py-3 text-sm font-bold text-white shadow-lg"
