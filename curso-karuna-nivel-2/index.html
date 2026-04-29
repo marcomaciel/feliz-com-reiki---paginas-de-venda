@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="https://felizcomreiki.com.br/wp-content/uploads/2021/12/LOGO-QUADRADO-PEQUENO-150X150.png" />
+  <title>Curso de Karuna Reiki Nível 2 | Feliz com Reiki</title>
+  <meta name="description" content="Aprofunde sua prática no Curso de Karuna Reiki Nível 2 com Kátia Maciel, aprendendo quatro novos símbolos, ativações e técnicas mais refinadas para trabalhar traumas, padrões emocionais e bloqueios profundos." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Lato', 'sans-serif'],
+          },
+          colors: {
+            karuna: {
+              primary: '#8B008B',
+              support: '#FDF2FD',
+              deep: '#A02A8F',
+              darker: '#65165C',
+              soft: '#FFFCFF',
+              gold: '#D8A7D4',
+              text: '#402742'
+            }
+          },
+          boxShadow: {
+            soft: '0 18px 45px rgba(139, 0, 139, 0.10)',
+            glow: '0 22px 70px rgba(139, 0, 139, 0.24)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      color: #402742;
+      background:
+        radial-gradient(circle at top left, rgba(139, 0, 139, 0.16), transparent 32rem),
+        radial-gradient(circle at 88% 12%, rgba(216, 167, 212, 0.18), transparent 28rem),
+        linear-gradient(180deg, #FFFCFF 0%, #FDF2FD 45%, #FFFCFF 100%);
+    }
+
+    .font-serif { font-family: 'Playfair Display', serif; }
+
+    .mandala-pattern {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mandala-pattern::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 16% 22%, rgba(139,0,139,0.12) 0 2px, transparent 2px),
+        radial-gradient(circle at 82% 24%, rgba(160,42,143,0.12) 0 3px, transparent 3px),
+        radial-gradient(circle at 42% 84%, rgba(216,167,212,0.12) 0 2px, transparent 2px),
+        radial-gradient(circle at 50% 50%, rgba(139,0,139,0.05) 0 1px, transparent 1px);
+      background-size: 90px 90px, 130px 130px, 110px 110px, 42px 42px;
+      pointer-events: none;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.76);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+    }
+
+    .btn-primary {
+      background: #8B008B;
+      color: #ffffff;
+      transition: all 0.25s ease;
+      box-shadow: 0 14px 30px rgba(139, 0, 139, 0.24);
+    }
+
+    .btn-primary:hover {
+      background: #770077;
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px rgba(139, 0, 139, 0.34);
+    }
+
+    .btn-soft {
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(139, 0, 139, 0.16);
+      transition: all 0.25s ease;
+    }
+
+    .btn-soft:hover {
+      background: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(139, 0, 139, 0.10);
+    }
+
+    .section-kicker {
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #A02A8F;
+      font-weight: 900;
+      font-size: 0.78rem;
+    }
+
+    .module-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .module-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 45px rgba(139, 0, 139, 0.12);
+      border-color: rgba(139, 0, 139, 0.30);
+    }
+
+    .faq-answer {
+      display: none;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .whatsapp-float {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(18px) scale(0.96);
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-float.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+
+    .whatsapp-label {
+      margin-top: 0.45rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 0.35rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      line-height: 1.1;
+      color: #65165C;
+      text-align: center;
+      box-shadow: 0 10px 24px rgba(139, 0, 139, 0.14);
+      white-space: nowrap;
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- BLOCO 01: HERO - A PROMESSA -->
+  <header class="mandala-pattern relative">
+    <div class="relative mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 md:grid-cols-2 md:py-24 lg:px-8">
+      <div data-aos="fade-right">
+        <p class="mb-4 inline-flex rounded-full border border-karuna-primary/25 bg-white/75 px-4 py-2 text-sm font-bold uppercase tracking-[0.22em] text-karuna-deep">
+          Curso de Karuna Reiki Nível 2 • Linhagem William Lee Rand
+        </p>
+
+        <h1 class="font-serif text-4xl font-bold leading-tight text-karuna-text md:text-5xl lg:text-6xl">
+          Vá além da aplicação energética e aprenda a tocar a raiz emocional e espiritual da dor.
+        </h1>
+
+        <p class="mt-6 text-lg leading-8 text-karuna-text/80 md:text-xl">
+          Um aprofundamento guiado por Kátia Maciel para quem sente que já amadureceu no Reiki e deseja trabalhar com mais precisão, intuição e compaixão, recebendo quatro novos símbolos, ativações e técnicas refinadas do Karuna Reiki Nível 2.
+        </p>
+
+        <div class="mt-8 grid gap-3 sm:grid-cols-3">
+          <div class="rounded-2xl bg-white/75 p-4 shadow-soft">
+            <p class="text-2xl">🔮</p>
+            <p class="mt-2 text-sm font-bold text-karuna-text">4 novos símbolos</p>
+          </div>
+          <div class="rounded-2xl bg-white/75 p-4 shadow-soft">
+            <p class="text-2xl">🕊️</p>
+            <p class="mt-2 text-sm font-bold text-karuna-text">Compaixão mais profunda</p>
+          </div>
+          <div class="rounded-2xl bg-white/75 p-4 shadow-soft">
+            <p class="text-2xl">✨</p>
+            <p class="mt-2 text-sm font-bold text-karuna-text">Percepção energética ampliada</p>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a href="#checkout" class="btn-primary rounded-full px-8 py-4 text-center text-base font-bold">
+            Quero dar esse salto
+          </a>
+          <a href="#modulos" class="btn-soft rounded-full px-8 py-4 text-center text-base font-bold text-karuna-deep">
+            Ver o que vou aprender
+          </a>
+        </div>
+
+        <p class="mt-5 text-sm leading-6 text-karuna-text/60">
+          Curso ao vivo e online para reikianos que desejam aprofundar a prática com mais sensibilidade, refinamento e autenticidade de linhagem.
+        </p>
+      </div>
+
+      <div class="relative" data-aos="fade-left">
+        <div class="absolute -left-6 -top-6 h-28 w-28 rounded-full bg-karuna-primary/15 blur-2xl"></div>
+        <div class="absolute -bottom-8 -right-6 h-36 w-36 rounded-full bg-karuna-primary/15 blur-3xl"></div>
+
+        <div class="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/60 p-3 shadow-glow backdrop-blur">
+          <img
+            src="https://felizcomreiki.com.br/wp-content/uploads/2024/01/curso-reiki-karuna-katia-maciel-500-min.jpeg"
+            alt="Imagem do curso de Karuna Reiki com atmosfera serena, profunda e espiritual"
+            class="h-[430px] w-full rounded-[1.5rem] object-cover"
+          />
+        </div>
+
+        <div class="glass absolute -bottom-6 left-6 right-6 rounded-[1.5rem] p-5 shadow-soft">
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-karuna-deep">Karuna Nível 2 aprofunda</p>
+          <p class="mt-2 text-base leading-7 text-karuna-text/80">
+            Você aprende a compreender com mais clareza o que está por trás de traumas, relações difíceis, bloqueios persistentes e padrões que se repetem.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- BLOCO 02: A CONEXÃO - O MOMENTO DO ALUNO -->
+    <section class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-5xl" data-aos="fade-up">
+        <div class="mx-auto max-w-4xl text-center">
+          <span class="section-kicker">O momento do aluno</span>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-karuna-text md:text-5xl">
+            Você sente que já não quer apenas aplicar energia, mas compreender profundamente o que está por trás da dor?
+          </h2>
+        </div>
+
+        <div class="mt-10 grid gap-8 md:grid-cols-[1fr_0.9fr] md:items-start">
+          <div class="space-y-6 rounded-[2rem] bg-white/75 p-8 text-lg leading-8 shadow-soft">
+            <p>
+              Você sente que sua caminhada no Reiki já abriu muita coisa em você, mas ainda existem questões mais sutis, emocionais e espirituais que pedem um olhar mais profundo? Muitas vezes a prática evolui e nasce um novo chamado: não só tratar, mas compreender as raízes do que dói, do que se repete e do que permanece escondido por trás dos sintomas.
+            </p>
+            <p>
+              O Karuna Reiki Nível 2 foi pensado exatamente para esse momento. Ele amplia sua conexão com a energia da compaixão e leva sua percepção a outro patamar, ajudando você a trabalhar com mais refinamento temas como traumas, padrões emocionais, relacionamentos e bloqueios que nem sempre a pessoa consegue nomear conscientemente.
+            </p>
+          </div>
+
+          <div class="rounded-[2rem] border border-karuna-primary/15 bg-karuna-support p-8 shadow-soft">
+            <h3 class="font-serif text-2xl font-bold text-karuna-text">Este curso é para você que deseja:</h3>
+            <ul class="mt-6 space-y-4 text-karuna-text/80">
+              <li class="flex gap-3"><span class="text-karuna-deep">✓</span><span>Dar continuidade ao Karuna Reiki com um nível mais refinado e transformador.</span></li>
+              <li class="flex gap-3"><span class="text-karuna-deep">✓</span><span>Aprender quatro novos símbolos e ativações que ampliam a leitura emocional e espiritual.</span></li>
+              <li class="flex gap-3"><span class="text-karuna-deep">✓</span><span>Desenvolver mais intuição, sensibilidade e clareza para atuar em questões complexas.</span></li>
+              <li class="flex gap-3"><span class="text-karuna-deep">✓</span><span>Receber esse ensino dentro da linhagem original, com profundidade, seriedade e acolhimento.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 03: A SOLUÇÃO - O CURSO -->
+    <section id="curso" class="bg-white/70 px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-center">
+          <div data-aos="fade-right">
+            <div class="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/60 p-3 shadow-soft backdrop-blur">
+              <img
+                src="https://felizcomreiki.com.br/wp-content/uploads/2026/04/meditando.avif"
+                alt="Pessoa em meditação profunda representando clareza emocional, intuição e expansão de consciência"
+                class="h-[420px] w-full rounded-[1.5rem] object-cover object-center"
+              />
+            </div>
+          </div>
+
+          <div data-aos="fade-left">
+            <span class="section-kicker">A solução</span>
+            <h2 class="mt-4 font-serif text-3xl font-bold text-karuna-text md:text-5xl">
+              Um aprofundamento poderoso para quem quer atuar nas camadas mais profundas da experiência humana.
+            </h2>
+
+            <div class="mt-6 space-y-5 text-lg leading-8 text-karuna-text/80">
+              <p>
+                O Curso de Karuna Reiki Nível 2 é um passo de maturidade dentro desse sistema criado por William Lee Rand. Aqui, você recebe quatro novos símbolos e ativações que ampliam significativamente sua conexão com a energia da compaixão, tornando sua atuação mais sensível, precisa e profunda.
+              </p>
+              <p>
+                Neste nível, você aprende técnicas mais refinadas, meditações com os símbolos e formas de aplicação voltadas a traumas, padrões emocionais, relacionamentos e bloqueios que muitas vezes nem a própria pessoa consegue identificar conscientemente. O foco deixa de ser apenas a aplicação energética e passa a incluir compreensão, leitura e presença.
+              </p>
+              <p>
+                Mais do que adicionar recursos, este curso transforma o praticante. É comum sentir mais clareza emocional, fortalecimento da intuição e uma capacidade maior de sustentar processos complexos com mais serenidade, autenticidade e Compaixão em Ação.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-4">
+          <div class="rounded-[2rem] border border-karuna-primary/15 bg-karuna-support p-6 shadow-soft" data-aos="fade-up">
+            <p class="text-3xl">1</p>
+            <h3 class="mt-3 font-serif text-xl font-bold">Quatro novos símbolos</h3>
+            <p class="mt-3 text-sm leading-6 text-karuna-text/70">Você aprende Gnosa, Iava, Shanti e Kriya com contexto, significado e aplicação energética prática.</p>
+          </div>
+          <div class="rounded-[2rem] border border-karuna-primary/15 bg-karuna-support p-6 shadow-soft" data-aos="fade-up" data-aos-delay="80">
+            <p class="text-3xl">2</p>
+            <h3 class="mt-3 font-serif text-xl font-bold">Ativações e meditações</h3>
+            <p class="mt-3 text-sm leading-6 text-karuna-text/70">As práticas ampliam sua sensibilidade e ajudam a integrar os símbolos com mais profundidade e presença.</p>
+          </div>
+          <div class="rounded-[2rem] border border-karuna-primary/15 bg-karuna-support p-6 shadow-soft" data-aos="fade-up" data-aos-delay="160">
+            <p class="text-3xl">3</p>
+            <h3 class="mt-3 font-serif text-xl font-bold">Leitura mais refinada</h3>
+            <p class="mt-3 text-sm leading-6 text-karuna-text/70">Você passa a perceber melhor o que existe por trás de dores recorrentes, padrões repetitivos e conflitos emocionais.</p>
+          </div>
+          <div class="rounded-[2rem] border border-karuna-primary/15 bg-karuna-support p-6 shadow-soft" data-aos="fade-up" data-aos-delay="240">
+            <p class="text-3xl">4</p>
+            <h3 class="mt-3 font-serif text-xl font-bold">Linhagem original</h3>
+            <p class="mt-3 text-sm leading-6 text-karuna-text/70">O aprendizado acontece com respeito à seriedade do sistema e à autenticidade da linhagem de origem.</p>
+          </div>
+        </div>
+
+        <div id="modulos" class="mt-16" data-aos="fade-up">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="section-kicker">O que você vai aprender</span>
+            <h3 class="mt-4 font-serif text-3xl font-bold text-karuna-text md:text-4xl">
+              Um percurso profundo para elevar sua percepção energética e sua atuação com o Karuna Reiki Nível 2.
+            </h3>
+          </div>
+
+          <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <article class="module-card rounded-[1.5rem] border border-karuna-primary/15 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">A passagem para o Nível 2</h4>
+              <p class="mt-3 text-sm leading-6 text-karuna-text/70">Compreenda o que amadurece no praticante quando ele deixa de apenas aplicar e passa a perceber com mais profundidade.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-karuna-primary/15 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Símbolo Gnosa</h4>
+              <p class="mt-3 text-sm leading-6 text-karuna-text/70">Explore a atuação desse símbolo em clareza espiritual, discernimento e reorganização interna.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-karuna-primary/15 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Símbolo Iava</h4>
+              <p class="mt-3 text-sm leading-6 text-karuna-text/70">Aprofunde aplicações ligadas à libertação de condicionamentos e à expansão da consciência energética.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-karuna-primary/15 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Símbolo Shanti</h4>
+              <p class="mt-3 text-sm leading-6 text-karuna-text/70">Aprenda a trabalhar com uma vibração que favorece paz profunda, suavização de medos e reorganização interior.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-karuna-primary/15 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Símbolo Kriya</h4>
+              <p class="mt-3 text-sm leading-6 text-karuna-text/70">Conheça usos ligados a manifestação, ação consciente e alinhamento entre intenção, energia e prática.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-karuna-primary/15 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Ativações do Nível 2</h4>
+              <p class="mt-3 text-sm leading-6 text-karuna-text/70">Receba orientações para integrar os novos símbolos e consolidar a nova frequência de trabalho energético.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-karuna-primary/15 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Meditações com os símbolos</h4>
+              <p class="mt-3 text-sm leading-6 text-karuna-text/70">Aprofunde sua conexão interior por meio de práticas meditativas que refinam escuta, sensibilidade e presença.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-karuna-primary/15 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Traumas e padrões emocionais</h4>
+              <p class="mt-3 text-sm leading-6 text-karuna-text/70">Aprenda formas mais conscientes de atuar em conteúdos emocionais, bloqueios persistentes e histórias repetitivas.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-karuna-primary/15 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Relações e vínculos</h4>
+              <p class="mt-3 text-sm leading-6 text-karuna-text/70">Explore aplicações em temas relacionais, padrões de convivência e dores afetivas com mais discernimento energético.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-karuna-primary/15 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Prática mais intuitiva</h4>
+              <p class="mt-3 text-sm leading-6 text-karuna-text/70">Desenvolva sua capacidade de perceber o que o campo pede, com mais maturidade e segurança no servir.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-karuna-primary/15 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Aplicação refinada</h4>
+              <p class="mt-3 text-sm leading-6 text-karuna-text/70">Receba direcionamentos para conduzir sessões com mais clareza, profundidade e respeito ao processo do outro.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-karuna-primary/15 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Integração na vida e nos atendimentos</h4>
+              <p class="mt-3 text-sm leading-6 text-karuna-text/70">Transforme o Karuna Reiki Nível 2 em uma presença viva no seu autocuidado, na sua percepção e no seu trabalho.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 04: TRANSFORMAÇÃO 360º -->
+    <section class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+          <span class="section-kicker">Transformação 360º</span>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-karuna-text md:text-5xl">
+            O Karuna Reiki Nível 2 aprofunda a técnica e também transforma a forma como você sente, percebe e atua.
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-karuna-text/75">
+            Esse nível costuma marcar uma virada no praticante: mais leitura interna, mais compaixão madura e uma presença energética capaz de sustentar questões mais complexas.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <article class="rounded-[2rem] border border-karuna-primary/15 bg-white/75 p-8 shadow-soft" data-aos="fade-up">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-karuna-support text-3xl">🌺</div>
+            <h3 class="font-serif text-2xl font-bold text-karuna-text">Físico</h3>
+            <p class="mt-4 leading-7 text-karuna-text/75">
+              A prática pode favorecer mais relaxamento, organização interna e presença corporal, ajudando o praticante a sustentar sessões com mais calma e centramento.
+            </p>
+          </article>
+
+          <article class="rounded-[2rem] border border-karuna-primary/15 bg-white/75 p-8 shadow-soft" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-karuna-support text-3xl">💞</div>
+            <h3 class="font-serif text-2xl font-bold text-karuna-text">Mental e Emocional</h3>
+            <p class="mt-4 leading-7 text-karuna-text/75">
+              Você amplia a clareza emocional, fortalece a intuição e ganha mais recursos para lidar com padrões, relações difíceis, memórias dolorosas e bloqueios profundos.
+            </p>
+          </article>
+
+          <article class="rounded-[2rem] border border-karuna-primary/15 bg-white/75 p-8 shadow-soft" data-aos="fade-up" data-aos-delay="200">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-karuna-support text-3xl">🪷</div>
+            <h3 class="font-serif text-2xl font-bold text-karuna-text">Espiritual</h3>
+            <p class="mt-4 leading-7 text-karuna-text/75">
+              O nível 2 aprofunda sua conexão com a energia da compaixão, amadurece sua escuta espiritual e eleva sua percepção energética a um novo patamar.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 05: QUEM É A MESTRA KÁTIA MACIEL? -->
+    <section class="bg-karuna-support px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+          <div data-aos="fade-right">
+            <span class="section-kicker">Sua mentora</span>
+            <h2 class="mt-4 font-serif text-3xl font-bold text-karuna-text md:text-5xl">
+              Quem é a Mestra Kátia Maciel?
+            </h2>
+
+            <div class="mt-6 space-y-5 text-lg leading-8 text-karuna-text/80">
+              <p>
+                Kátia Maciel é Mestra de Reiki, terapeuta holística credenciada pela ABRATH e pela Associação Portuguesa de Reiki, criadora do Feliz com Reiki, autora e mentora de alunos que buscam aprofundar sua jornada energética com seriedade e acolhimento.
+              </p>
+              <p>
+                Sua forma de ensinar une espiritualidade, direção prática e respeito ao processo individual de cada aluno. No Karuna Reiki Nível 2, isso faz toda a diferença, porque o conteúdo pede maturidade, presença e uma condução sensível para integrar o que é mais sutil.
+              </p>
+              <p>
+                Aprender com Kátia é receber mais do que conteúdo técnico: é viver um aprofundamento com contexto, linhagem, suporte e uma orientação que honra a profundidade real desse sistema.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass rounded-[2rem] p-8 shadow-soft" data-aos="fade-left">
+            <div class="flex flex-col items-center gap-5 text-center">
+              <img src="https://felizcomreiki.com.br/wp-content/uploads/2023/06/katia-oracao-300x300-1.jpg" alt="Kátia Maciel" class="h-64 w-64 rounded-[2rem] object-cover shadow-soft md:h-80 md:w-80" loading="lazy">
+              <blockquote class="font-serif text-2xl font-bold leading-9 text-karuna-text">
+                “Quando você aprofunda a compaixão, a energia deixa de ser apenas recurso e se torna compreensão viva.”
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 06: AGENDA - DATAS DO CURSO -->
+    <section class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-4xl" data-aos="fade-up">
+        <div class="rounded-[2.5rem] border border-karuna-gold/30 bg-gradient-to-br from-white/80 to-karuna-support/50 p-8 md:p-12" style="background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(253,242,253,0.84) 100%);">
+          <div class="text-center">
+            <span class="section-kicker">Agenda</span>
+            <h2 class="mt-4 font-serif text-3xl font-bold text-karuna-text md:text-5xl">
+              Marque na sua agenda
+            </h2>
+            <p class="mt-4 text-lg leading-8 text-karuna-text/80">
+              O Curso de Karuna Reiki Nível 2 acontece ao vivo e online, em horário de Brasília, para que você viva esse aprofundamento com presença, prática guiada e integração real.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-2">
+            <div class="relative overflow-hidden rounded-[2rem] border-2 border-karuna-primary/25 bg-white/90 p-8 shadow-soft">
+              <div class="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-karuna-primary/10 blur-2xl"></div>
+              <div class="relative">
+                <div class="inline-flex items-center gap-2 rounded-full bg-karuna-primary/10 px-4 py-1.5 text-sm font-bold uppercase tracking-[0.15em] text-karuna-deep">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Dia 1
+                </div>
+                <h3 class="mt-4 font-serif text-2xl font-bold text-karuna-text">Sábado, 13 de Junho de 2026</h3>
+                <div class="mt-4 flex items-center gap-3 text-karuna-text/80">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-karuna-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span class="text-lg font-semibold">9h às 16h</span>
+                  <span class="text-sm">(Horário de Brasília)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-[2rem] border-2 border-karuna-primary/25 bg-white/90 p-8 shadow-soft">
+              <div class="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-karuna-primary/10 blur-2xl"></div>
+              <div class="relative">
+                <div class="inline-flex items-center gap-2 rounded-full bg-karuna-primary/10 px-4 py-1.5 text-sm font-bold uppercase tracking-[0.15em] text-karuna-deep">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Dia 2
+                </div>
+                <h3 class="mt-4 font-serif text-2xl font-bold text-karuna-text">Domingo, 14 de Junho de 2026</h3>
+                <div class="mt-4 flex items-center gap-3 text-karuna-text/80">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-karuna-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span class="text-lg font-semibold">9h às 13h</span>
+                  <span class="text-sm">(Horário de Brasília)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 06: CTA - O CONVITE -->
+    <section id="checkout" class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-5xl rounded-[2.5rem] border border-karuna-primary/20 bg-white/80 p-8 text-center shadow-soft md:p-12" data-aos="zoom-in">
+        <span class="font-bold uppercase tracking-[0.22em] text-karuna-deep">O convite</span>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-karuna-text md:text-5xl">
+          Se você sente que já evoluiu no Reiki, esse pode ser o salto que muda sua forma de sentir, perceber e atuar.
+        </h2>
+        <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-karuna-text/80">
+          O Karuna Reiki Nível 2 costuma ser um divisor de águas para quem deseja ampliar a intuição, aprofundar a compaixão e servir com mais clareza em temas emocionais e espirituais complexos. Se esse chamado faz sentido para você, venha viver esse próximo nível com autenticidade de linhagem e condução cuidadosa.
+        </p>
+
+        <div class="mx-auto mt-10 max-w-md">
+          <div id="checkout-loading" class="rounded-[2rem] bg-karuna-support p-8">
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-karuna-deep">Preparando seu checkout...</p>
+          </div>
+
+          <div id="checkout-br" class="hidden rounded-[2rem] border border-karuna-primary/20 bg-karuna-support p-8">
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-karuna-deep">Para Brasil</p>
+            <p class="mt-4 font-serif text-5xl font-bold text-karuna-text">R$ 597</p>
+            <a href="https://felizcomreiki.com.br/karuna-2-mr" class="btn-primary mt-6 block rounded-full px-8 py-4 text-base font-bold">
+              Inscrever-me agora
+            </a>
+          </div>
+
+          <div id="checkout-eu" class="hidden rounded-[2rem] border border-karuna-primary/20 bg-karuna-support p-8">
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-karuna-deep">Para Europa e demais países</p>
+            <p class="mt-4 font-serif text-5xl font-bold text-karuna-text">€ 167</p>
+            <a href="https://felizcomreiki.com.br/karuna-2-me" class="btn-primary mt-6 block rounded-full px-8 py-4 text-base font-bold">
+              Inscrever-me agora
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 07: PERGUNTAS FREQUENTES -->
+    <section class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-5xl">
+        <div class="rounded-[2.5rem] bg-white/75 p-8 shadow-soft md:p-10" data-aos="fade-up">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="section-kicker">Perguntas frequentes</span>
+            <h3 class="mt-4 font-serif text-3xl font-bold text-karuna-text md:text-4xl">
+              O que você precisa saber antes de entrar.
+            </h3>
+          </div>
+
+          <div class="mx-auto mt-10 max-w-4xl space-y-4">
+            <div class="faq-item rounded-[1.5rem] border border-karuna-primary/15 bg-karuna-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">Preciso já ter feito o Karuna Reiki Nível 1?</span>
+                <span class="faq-icon text-3xl text-karuna-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-karuna-text/75">
+                Sim. O Nível 2 é um aprofundamento natural para quem já percorreu as bases do Karuna Reiki e deseja avançar com mais refinamento.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-karuna-primary/15 bg-karuna-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">O que aprenderei especificamente neste nível?</span>
+                <span class="faq-icon text-3xl text-karuna-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-karuna-text/75">
+                Você aprenderá quatro novos símbolos, ativações, meditações com os símbolos e técnicas mais refinadas para trabalhar temas emocionais e espirituais profundos.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-karuna-primary/15 bg-karuna-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">O curso é ao vivo e online?</span>
+                <span class="faq-icon text-3xl text-karuna-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-karuna-text/75">
+                Sim. As aulas desta turma acontecem ao vivo e online nos dias 13 e 14 de junho de 2026, no horário de Brasília.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-karuna-primary/15 bg-karuna-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">Esse curso ajuda em temas como relações, traumas e padrões repetitivos?</span>
+                <span class="faq-icon text-3xl text-karuna-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-karuna-text/75">
+                Esse é justamente um dos focos do Nível 2: ampliar sua percepção e sua atuação em questões emocionais e espirituais mais complexas, sempre com responsabilidade e compaixão.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-karuna-primary/15 bg-karuna-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">Receberei certificado?</span>
+                <span class="faq-icon text-3xl text-karuna-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-karuna-text/75">
+                Sim. Após concluir o processo do curso, você receberá seu certificado conforme as orientações da formação.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-karuna-primary/15 bg-karuna-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">Se eu moro fora do Brasil, consigo me inscrever?</span>
+                <span class="faq-icon text-3xl text-karuna-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-karuna-text/75">
+                Sim. A página identifica automaticamente seu país e exibe o checkout internacional quando você estiver fora do Brasil.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-karuna-primary/15 bg-karuna-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">O Karuna Reiki substitui tratamentos de saúde?</span>
+                <span class="faq-icon text-3xl text-karuna-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-karuna-text/75">
+                Não. O Karuna Reiki é uma prática complementar e não substitui tratamentos médicos, psicológicos ou terapêuticos.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Floating Button -->
+  <div
+    id="whatsappButton"
+    class="whatsapp-float fixed bottom-6 right-6 z-50 flex flex-col items-center md:bottom-24"
+  >
+    <a
+      href="https://wa.me/31657854330?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Curso%20de%20Karuna%20Reiki%20N%C3%ADvel%202%20da%20K%C3%A1tia..."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar com suporte pelo WhatsApp"
+      class="flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+        <path d="M16.04 3C9.43 3 4.06 8.35 4.06 14.93c0 2.1.55 4.15 1.6 5.95L4 29l8.33-1.63a12.05 12.05 0 0 0 5.72 1.45h.01C24.66 28.82 30 23.47 30 16.89 30 10.34 22.65 3 16.04 3Zm7.03 17.1c-.3.84-1.74 1.6-2.4 1.7-.62.09-1.4.13-2.25-.14-.52-.16-1.18-.38-2.03-.75-3.57-1.54-5.9-5.12-6.08-5.36-.18-.24-1.45-1.92-1.45-3.66 0-1.74.92-2.6 1.25-2.95.33-.36.72-.45.96-.45h.69c.22 0 .52-.08.81.62.3.72 1.03 2.5 1.12 2.68.09.18.15.39.03.63-.12.24-.18.39-.36.6-.18.21-.38.47-.54.63-.18.18-.37.38-.16.74.21.36.94 1.54 2.02 2.5 1.39 1.24 2.56 1.62 2.92 1.8.36.18.57.15.78-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.69.42.09.15.09.87-.21 1.71Z"/>
+      </svg>
+    </a>
+    <span class="whatsapp-label">Dúvidas? clique aqui</span>
+  </div>
+
+  <!-- Footer Padronizado -->
+  <footer class="border-t border-karuna-primary/15 px-6 py-8 text-center text-xs text-gray-500">
+    <div class="mx-auto max-w-6xl">
+      <p class="mb-3">© <span id="year"></span> Feliz com Reiki. Todos os direitos reservados.</p>
+      <p class="leading-6">
+        <a class="hover:text-karuna-deep" href="https://felizcomreiki.com.br/politica-de-privacidade/">Políticas de privacidade</a>
+        <span> | </span>
+        <a class="hover:text-karuna-deep" href="https://felizcomreiki.com.br/termos-de-uso/">Termos de uso</a>
+        <span> | </span>
+        <a class="hover:text-karuna-deep" href="https://felizcomreiki.com.br/aviso-legal/">Aviso Legal</a>
+        <span> | </span>
+        <a class="hover:text-karuna-deep" href="https://felizcomreiki.com.br/politica-de-privacidade/">Políticas de Cookies do Site</a>
+        <span> | </span>
+        <a class="hover:text-karuna-deep" href="https://felizcomreiki.com.br/contato/">Contato</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 750,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 80
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const whatsappButton = document.getElementById('whatsappButton');
+
+    function toggleWhatsAppButton() {
+      const scrollTop = window.scrollY || window.pageYOffset;
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+      if (scrollHeight <= 0) return;
+
+      const progress = scrollTop / scrollHeight;
+
+      if (progress >= 0.7) {
+        whatsappButton.classList.add('show');
+      } else {
+        whatsappButton.classList.remove('show');
+      }
+    }
+
+    window.addEventListener('scroll', toggleWhatsAppButton, { passive: true });
+    window.addEventListener('resize', toggleWhatsAppButton);
+
+    document.querySelectorAll('.faq-question').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        item.classList.toggle('open');
+      });
+    });
+
+    const checkoutBR = document.getElementById('checkout-br');
+    const checkoutEU = document.getElementById('checkout-eu');
+    const checkoutLoading = document.getElementById('checkout-loading');
+
+    function showCheckout(countryCode) {
+      checkoutLoading.classList.add('hidden');
+
+      if (countryCode === 'BR') {
+        checkoutBR.classList.remove('hidden');
+        checkoutEU.classList.add('hidden');
+      } else {
+        checkoutEU.classList.remove('hidden');
+        checkoutBR.classList.add('hidden');
+      }
+    }
+
+    async function getCountryFromCloudflare() {
+      const response = await fetch('https://cloudflare.com/cdn-cgi/trace', { cache: 'no-store' });
+      if (!response.ok) throw new Error('Cloudflare trace unavailable');
+
+      const text = await response.text();
+      const lines = text.split('\n');
+      const locationLine = lines.find((line) => line.startsWith('loc='));
+      if (!locationLine) throw new Error('Country not found in Cloudflare trace');
+
+      return locationLine.replace('loc=', '').trim();
+    }
+
+    async function getCountryFromIpApi() {
+      const response = await fetch('https://ipapi.co/json/', { cache: 'no-store' });
+      if (!response.ok) throw new Error('ipapi fallback unavailable');
+
+      const data = await response.json();
+      return data && data.country_code ? data.country_code : 'EU';
+    }
+
+    async function detectCountryAndShowCheckout() {
+      try {
+        const country = await getCountryFromCloudflare();
+        showCheckout(country);
+      } catch (cloudflareError) {
+        try {
+          const country = await getCountryFromIpApi();
+          showCheckout(country);
+        } catch (ipapiError) {
+          showCheckout('EU');
+        }
+      }
+    }
+
+    detectCountryAndShowCheckout();
+    toggleWhatsAppButton();
+  </script>
+</body>
+</html>
