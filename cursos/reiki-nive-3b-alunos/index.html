@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="https://felizcomreiki.com.br/wp-content/uploads/2021/12/LOGO-QUADRADO-PEQUENO-150X150.png" />
+  <title>Curso de Reiki Nível 3B | Feliz com Reiki</title>
+  <meta name="description" content="Torne-se Mestre Professor de Reiki no Curso de Reiki Nível 3B com Kátia Maciel e aprenda a sintonizar alunos em Reiki Usui Ryoho, Reiki Usui/Holy Fire® III - Online World Peace e Reiki Essencial Tibetano." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Lato', 'sans-serif'],
+          },
+          colors: {
+            reiki: {
+              primary: '#D4AF37',
+              support: '#FFFDF5',
+              deep: '#8A6B16',
+              darker: '#5E4610',
+              soft: '#FFFEFA',
+              gold: '#F1DE9B',
+              text: '#463816'
+            }
+          },
+          boxShadow: {
+            soft: '0 18px 45px rgba(138, 107, 22, 0.12)',
+            glow: '0 22px 70px rgba(212, 175, 55, 0.28)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      color: #463816;
+      background:
+        radial-gradient(circle at top left, rgba(212,175,55,0.20), transparent 34rem),
+        radial-gradient(circle at 90% 12%, rgba(241,222,155,0.25), transparent 26rem),
+        linear-gradient(180deg, #FFFEFA 0%, #FFFDF5 46%, #FFFEFA 100%);
+    }
+
+    .font-serif { font-family: 'Playfair Display', serif; }
+
+    .geometry-pattern {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .geometry-pattern::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(212,175,55,0.20) 0 2px, transparent 2px),
+        radial-gradient(circle at 80% 30%, rgba(138,107,22,0.12) 0 3px, transparent 3px),
+        radial-gradient(circle at 40% 85%, rgba(241,222,155,0.20) 0 2px, transparent 2px),
+        radial-gradient(circle at 50% 50%, rgba(212,175,55,0.07) 0 1px, transparent 1px);
+      background-size: 90px 90px, 130px 130px, 110px 110px, 42px 42px;
+      pointer-events: none;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.74);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.82);
+    }
+
+    .btn-primary {
+      background: #D4AF37;
+      color: #ffffff;
+      transition: all 0.25s ease;
+      box-shadow: 0 14px 30px rgba(212,175,55,0.35);
+    }
+
+    .btn-primary:hover {
+      background: #B99222;
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px rgba(212,175,55,0.42);
+    }
+
+    .btn-soft {
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(212,175,55,0.28);
+      transition: all 0.25s ease;
+    }
+
+    .btn-soft:hover {
+      background: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(138,107,22,0.10);
+    }
+
+    .section-kicker {
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #8A6B16;
+      font-weight: 900;
+      font-size: 0.78rem;
+    }
+
+    .module-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .module-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 45px rgba(138,107,22,0.12);
+      border-color: rgba(212,175,55,0.45);
+    }
+
+    .faq-answer {
+      display: none;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .whatsapp-float {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(18px) scale(0.96);
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-float.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+
+    .whatsapp-label {
+      margin-top: 0.45rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 0.35rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      line-height: 1.1;
+      color: #5E4610;
+      text-align: center;
+      box-shadow: 0 10px 24px rgba(138, 107, 22, 0.16);
+      white-space: nowrap;
+    }
+
+    .student-offer-bar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 60;
+      display: flex;
+      justify-content: center;
+      padding: 0.55rem 1rem;
+      background: #5E4610;
+      color: #FFFDF5;
+      box-shadow: 0 4px 18px rgba(70, 56, 22, 0.24);
+    }
+
+    .student-offer-bar__text {
+      max-width: 72rem;
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 900;
+      line-height: 1.35;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .student-offer-bar__highlight {
+      color: #F1DE9B;
+    }
+
+    body {
+      padding-top: 3.1rem;
+    }
+
+    @media (min-width: 640px) {
+      .student-offer-bar__text { font-size: 0.82rem; }
+      body { padding-top: 2.9rem; }
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <aside class="student-offer-bar" role="status" aria-label="Desconto exclusivo para alunos">
+    <p class="student-offer-bar__text">Condição especial para alunos da Kátia: <span class="student-offer-bar__highlight">30% de desconto exclusivo</span></p>
+  </aside>
+
+  <!-- BLOCO 01: HERO - A PROMESSA -->
+  <header class="geometry-pattern relative">
+    <div class="relative mx-auto grid max-w-7xl items-center gap-10 px-6 py-16 md:grid-cols-2 md:py-24 lg:px-8">
+      <div data-aos="fade-right">
+        <p class="mb-4 inline-flex rounded-full border border-reiki-primary/35 bg-white/75 px-4 py-2 text-sm font-bold uppercase tracking-[0.22em] text-reiki-deep">
+          Curso de Reiki Nível 3B • Formação de Mestre Professor
+        </p>
+
+        <h1 class="font-serif text-4xl font-bold leading-tight text-reiki-text md:text-5xl lg:text-6xl">
+          Torne-se Mestre Professor em três linhagens do Reiki.
+        </h1>
+
+        <p class="mt-6 text-lg leading-8 text-reiki-text/80 md:text-xl">
+          Uma jornada guiada por Kátia Maciel para você ensinar e sintonizar com clareza, responsabilidade e confiança em <strong>Reiki Usui Ryoho, Reiki Usui/Holy Fire® III - Online World Peace e Reiki Essencial Tibetano.</strong>
+        </p>
+
+        <div class="mt-8 grid gap-3 sm:grid-cols-3">
+          <div class="rounded-2xl border border-reiki-primary/20 bg-white/80 p-4 shadow-soft">
+            <p class="text-2xl">🪷</p>
+            <p class="mt-2 text-sm font-bold leading-5 text-reiki-text">Reiki Usui Ryoho</p>
+          </div>
+          <div class="rounded-2xl border border-reiki-primary/20 bg-white/80 p-4 shadow-soft">
+            <p class="text-2xl">🔥</p>
+            <p class="mt-2 text-sm font-bold leading-5 text-reiki-text">Reiki Usui/Holy Fire® III - Online World Peace</p>
+          </div>
+          <div class="rounded-2xl border border-reiki-primary/20 bg-white/80 p-4 shadow-soft">
+            <p class="text-2xl">🏔️</p>
+            <p class="mt-2 text-sm font-bold leading-5 text-reiki-text">Reiki Essencial Tibetano</p>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a href="#checkout" class="btn-primary rounded-full px-8 py-4 text-center text-base font-bold">
+            Quero me tornar Mestre Professor
+          </a>
+          <a href="#modulos" class="btn-soft rounded-full px-8 py-4 text-center text-base font-bold text-reiki-deep">
+            Ver o que vou aprender
+          </a>
+        </div>
+
+        <p class="mt-5 text-sm leading-6 text-reiki-text/60">
+          Curso ao vivo e online, com prática guiada, sintonizações e acompanhamento próximo para você ensinar Reiki com segurança.
+        </p>
+      </div>
+
+      <div class="relative" data-aos="fade-left">
+        <div class="absolute -left-6 -top-6 h-28 w-28 rounded-full bg-reiki-primary/20 blur-2xl"></div>
+        <div class="absolute -bottom-8 -right-6 h-36 w-36 rounded-full bg-reiki-primary/20 blur-3xl"></div>
+
+        <div class="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/60 p-3 shadow-glow backdrop-blur">
+          <img
+            src="https://felizcomreiki.com.br/wp-content/uploads/2024/05/despertar-do-mestre-600.jpeg"
+            alt="Mestra de Reiki em prática de sintonização, representando ensino, expansão e transmissão de conhecimento"
+            class="h-[430px] w-full rounded-[1.5rem] object-cover object-center"
+          />
+        </div>
+
+        <div class="glass absolute -bottom-6 left-6 right-6 rounded-[1.5rem] p-5 shadow-soft">
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-reiki-deep">O 3B transforma</p>
+          <p class="mt-2 text-base leading-7 text-reiki-text/80">
+            Neste nível, você passa a transmitir o Reiki: aprende a sintonizar, ensinar e acompanhar novos alunos com presença e responsabilidade.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- BLOCO 02: A CONEXÃO - O MOMENTO DO ALUNO -->
+    <section class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-5xl" data-aos="fade-up">
+        <div class="mx-auto max-w-4xl text-center">
+          <span class="section-kicker">O momento do aluno</span>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+            Você sente que chegou a hora de compartilhar o Reiki e formar novos caminhos?
+          </h2>
+        </div>
+
+        <div class="mt-10 grid gap-8 md:grid-cols-[1fr_0.9fr] md:items-start">
+          <div class="space-y-6 rounded-[2rem] bg-white/75 p-8 text-lg leading-8 shadow-soft">
+            <p>
+              Você sente que sua prática amadureceu e que chegou a hora de dar o próximo passo? Em certo ponto da caminhada, o Reiki deixa de ser apenas uma técnica aprendida e se torna um chamado para ensinar, sintonizar e apoiar outras pessoas em sua própria jornada.
+            </p>
+            <p>
+              O Reiki Nível 3B nasce exatamente nesse momento. Ele é para quem deseja se tornar Mestre Professor, dominar as sintonizações em Reiki Usui Ryoho, Reiki Usui/Holy Fire® III - Online World Peace e Reiki Essencial Tibetano, e conduzir o ensino do Reiki com técnica, ética, clareza e confiança.
+            </p>
+          </div>
+
+          <div class="rounded-[2rem] border border-reiki-primary/20 bg-reiki-support p-8 shadow-soft">
+            <h3 class="font-serif text-2xl font-bold text-reiki-text">Este curso é para você que deseja:</h3>
+            <ul class="mt-6 space-y-4 text-reiki-text/80">
+              <li class="flex gap-3"><span class="text-reiki-deep">✓</span><span>Aprender a sintonizar alunos em Reiki Usui Ryoho, Reiki Usui/Holy Fire® III - Online World Peace e Reiki Essencial Tibetano.</span></li>
+              <li class="flex gap-3"><span class="text-reiki-deep">✓</span><span>Dominar técnicas avançadas e transmiti-las com clareza.</span></li>
+              <li class="flex gap-3"><span class="text-reiki-deep">✓</span><span>Atuar como Mestre Professor com segurança, ética e confiança.</span></li>
+              <li class="flex gap-3"><span class="text-reiki-deep">✓</span><span>Receber acompanhamento próximo durante toda a sua formação.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 03: A SOLUÇÃO - O CURSO -->
+    <section id="curso" class="bg-white/70 px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-center">
+          <div data-aos="fade-right">
+            <div class="relative overflow-hidden rounded-[2rem] border border-white/80 bg-white/60 p-3 shadow-soft backdrop-blur">
+              <img
+                src="https://felizcomreiki.com.br/wp-content/uploads/2019/01/maos-dadas.jpg"
+                alt="Mãos em gesto de presença e conexão representando serviço consciente, acolhimento e maturidade espiritual"
+                class="h-[420px] w-full rounded-[1.5rem] object-cover object-center"
+              />
+            </div>
+          </div>
+
+          <div data-aos="fade-left">
+            <span class="section-kicker">A solução</span>
+            <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+              A formação completa para você se tornar Mestre Professor de Reiki.
+            </h2>
+
+            <div class="mt-6 space-y-5 text-lg leading-8 text-reiki-text/80">
+              <p>
+                O Curso de Reiki Nível 3B foi organizado para preparar você para ensinar e sintonizar novos reikianos. Aqui, você aprofunda a técnica, revisa os fundamentos e aprende a conduzir esse conhecimento com responsabilidade.
+              </p>
+              <p>
+                Você estudará o símbolo de Mestre Day Ko Myo, técnicas avançadas, Reiju, mandala de Reiki e as sintonizações em Reiki Usui Ryoho, Reiki Usui/Holy Fire® III - Online World Peace e Reiki Essencial Tibetano. É uma formação para integrar conhecimento, prática e presença como Mestre Professor.
+              </p>
+              <p>
+                Você aprende, integra e pratica junto comigo. Estarei sempre ao seu lado para que aplique cada técnica com segurança e confiança.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-4">
+          <div class="rounded-[2rem] border border-reiki-primary/20 bg-reiki-support p-6 shadow-soft" data-aos="fade-up">
+            <p class="text-3xl">1</p>
+            <h3 class="mt-3 font-serif text-xl font-bold">Mestre Professor</h3>
+            <p class="mt-3 text-sm leading-6 text-reiki-text/70">Prepare-se para ensinar Reiki e conduzir sintonizações com segurança e responsabilidade.</p>
+          </div>
+          <div class="rounded-[2rem] border border-reiki-primary/20 bg-reiki-support p-6 shadow-soft" data-aos="fade-up" data-aos-delay="80">
+            <p class="text-3xl">2</p>
+            <h3 class="mt-3 font-serif text-xl font-bold">Três linhagens</h3>
+            <p class="mt-3 text-sm leading-6 text-reiki-text/70">Aprenda a sintonizar em Reiki Usui Ryoho, Reiki Usui/Holy Fire® III - Online World Peace e Reiki Essencial Tibetano.</p>
+          </div>
+          <div class="rounded-[2rem] border border-reiki-primary/20 bg-reiki-support p-6 shadow-soft" data-aos="fade-up" data-aos-delay="160">
+            <p class="text-3xl">3</p>
+            <h3 class="mt-3 font-serif text-xl font-bold">Técnicas avançadas</h3>
+            <p class="mt-3 text-sm leading-6 text-reiki-text/70">Domine recursos que ampliam sua atuação como terapeuta e Mestre de Reiki.</p>
+          </div>
+          <div class="rounded-[2rem] border border-reiki-primary/20 bg-reiki-support p-6 shadow-soft" data-aos="fade-up" data-aos-delay="240">
+            <p class="text-3xl">4</p>
+            <h3 class="mt-3 font-serif text-xl font-bold">Acompanhamento próximo</h3>
+            <p class="mt-3 text-sm leading-6 text-reiki-text/70">Pratique com orientação para ensinar com confiança e autenticidade.</p>
+          </div>
+        </div>
+
+        <div id="modulos" class="mt-16" data-aos="fade-up">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="section-kicker">O que você vai aprender</span>
+            <h3 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-4xl">
+              Módulos completos para não ficar nenhuma dúvida sem resposta.
+            </h3>
+          </div>
+
+          <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Introdução ao Nível de Mestre em três linhagens</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Compreenda o caminho do Mestre Professor em Reiki Usui Ryoho, Reiki Usui/Holy Fire® III - Online World Peace e Reiki Essencial Tibetano.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Day Ko Myo — o símbolo de Mestre</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Estude o símbolo de Mestre e sua aplicação na prática e nas sintonizações.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">O símbolo DKM não tradicional</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Amplie sua compreensão sobre as possibilidades do Day Ko Myo.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Revendo a filosofia do Reiki</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Reforce os princípios que sustentam uma atuação consciente como Mestre.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Técnicas mais avançadas de Reiki</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Conheça recursos avançados para aprofundar a sua prática.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Reiju</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Aprenda esta prática de transmissão e fortalecimento energético.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Mandala de Reiki ou Mandala de Cristal</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Use mandalas como apoio para intenções e práticas energéticas.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">O terapeuta profissional</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Fortaleça sua postura, ética e presença profissional nos atendimentos.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Posições extras das mãos</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Expanda seu repertório de aplicação com novas posições.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Outras formas de usar o Reiki como Mestre</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Descubra novas formas de levar o Reiki à sua atuação e ao seu ensino.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Revisão dos níveis 1 e 2</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Reorganize os fundamentos essenciais antes de transmitir o Reiki.</p>
+            </article>
+            <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6">
+              <h4 class="font-serif text-xl font-bold">Sintonização em três linhagens</h4>
+              <p class="mt-3 text-sm leading-6 text-reiki-text/70">Aprenda passo a passo a sintonizar seus futuros alunos em Reiki Usui Ryoho, Reiki Usui/Holy Fire® III - Online World Peace e Reiki Essencial Tibetano.</p>
+            </article>
+          </div>
+
+          <div class="mt-16">
+            <div class="mx-auto max-w-3xl text-center">
+              <span class="section-kicker">Conteúdos extras</span>
+              <h3 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-4xl">Práticas complementares para ampliar sua atuação.</h3>
+            </div>
+            <div class="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6"><h4 class="font-serif text-xl font-bold">Como ativar canais de força</h4></article>
+              <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6"><h4 class="font-serif text-xl font-bold">Técnica de enraizamento</h4></article>
+              <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6"><h4 class="font-serif text-xl font-bold">Kenyoku-Ho — técnica de banho seco</h4></article>
+              <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6"><h4 class="font-serif text-xl font-bold">Limpeza de 21 dias</h4></article>
+              <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6"><h4 class="font-serif text-xl font-bold">Byosen-Reikan-Ho</h4><p class="mt-3 text-sm leading-6 text-reiki-text/70">Técnica de percepção da linha da doença.</p></article>
+              <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6"><h4 class="font-serif text-xl font-bold">Hesso Chiryo Ho</h4><p class="mt-3 text-sm leading-6 text-reiki-text/70">Técnica de tratamento pelo umbigo.</p></article>
+              <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6"><h4 class="font-serif text-xl font-bold">Tanden-Chiryo-Ho ou Gedoku-Ho</h4><p class="mt-3 text-sm leading-6 text-reiki-text/70">Técnica de tratamento pelo Tanden.</p></article>
+              <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6"><h4 class="font-serif text-xl font-bold">Ketsueki-kokan-ho</h4><p class="mt-3 text-sm leading-6 text-reiki-text/70">Técnica de renovação do sangue.</p></article>
+              <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6"><h4 class="font-serif text-xl font-bold">Jaki-kiri-jhoka-ho</h4><p class="mt-3 text-sm leading-6 text-reiki-text/70">Técnica de cortar a energia negativa.</p></article>
+              <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6"><h4 class="font-serif text-xl font-bold">Renzoku-Reiki-Ho</h4><p class="mt-3 text-sm leading-6 text-reiki-text/70">Técnica de Reiki em maratona.</p></article>
+              <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6"><h4 class="font-serif text-xl font-bold">Reiki Mawashi</h4><p class="mt-3 text-sm leading-6 text-reiki-text/70">Reiki em círculo.</p></article>
+              <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6"><h4 class="font-serif text-xl font-bold">Oshite-Chiryo-Ho</h4><p class="mt-3 text-sm leading-6 text-reiki-text/70">Técnica de tratamento empurrando a ponta dos dedos.</p></article>
+              <article class="module-card rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6"><h4 class="font-serif text-xl font-bold">Koki-ho</h4><p class="mt-3 text-sm leading-6 text-reiki-text/70">Técnica do sopro.</p></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 04: TRANSFORMAÇÃO 360º -->
+    <section class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
+          <span class="section-kicker">Transformação 360º</span>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+            O Reiki Nível 3B une técnica, presença e preparo para você se tornar Mestre Professor.
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-reiki-text/75">
+            Você amplia sua prática e desenvolve a segurança necessária para ensinar e sintonizar com responsabilidade.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <article class="rounded-[2rem] border border-reiki-primary/20 bg-white/75 p-8 shadow-soft" data-aos="fade-up">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-reiki-support text-3xl">🪻</div>
+            <h3 class="font-serif text-2xl font-bold text-reiki-text">Físico</h3>
+            <p class="mt-4 leading-7 text-reiki-text/75">
+              As técnicas avançadas ampliam seus recursos de autocuidado e de atendimento complementar.
+            </p>
+          </article>
+
+          <article class="rounded-[2rem] border border-reiki-primary/20 bg-white/75 p-8 shadow-soft" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-reiki-support text-3xl">🕊️</div>
+            <h3 class="font-serif text-2xl font-bold text-reiki-text">Mental e Emocional</h3>
+            <p class="mt-4 leading-7 text-reiki-text/75">
+              A formação fortalece clareza, discernimento e confiança para conduzir alunos e atendimentos.
+            </p>
+          </article>
+
+          <article class="rounded-[2rem] border border-reiki-primary/20 bg-white/75 p-8 shadow-soft" data-aos="fade-up" data-aos-delay="200">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-reiki-support text-3xl">🌌</div>
+            <h3 class="font-serif text-2xl font-bold text-reiki-text">Espiritual</h3>
+            <p class="mt-4 leading-7 text-reiki-text/75">
+              Você integra o Reiki com mais consciência e se prepara para transmitir essa prática a novas pessoas.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 05: QUEM É A MESTRA KÁTIA MACIEL? -->
+    <section class="bg-reiki-support px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+          <div data-aos="fade-right">
+            <span class="section-kicker">Sua mentora</span>
+            <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+              Quem é a Mestra Kátia Maciel?
+            </h2>
+
+            <div class="mt-6 space-y-5 text-lg leading-8 text-reiki-text/80">
+              <p>
+                Kátia Maciel é Mestra de Reiki, terapeuta holística credenciada pela ABRATH, criadora do Feliz com Reiki e autora dos livros <strong>Combine Reiki com Outras Terapias</strong> e <strong>O Segredo dos Chakras para a Abundância</strong>.
+              </p>
+              <p>
+                Sua forma de ensinar une acolhimento, espiritualidade e direção prática. No Reiki Nível 3B, isso é essencial, porque o aluno se prepara para ensinar, sintonizar e assumir a responsabilidade de ser Mestre Professor.
+              </p>
+              <p>
+                Com Kátia, você recebe mais do que aulas. Você recebe um caminho seguro para aprender, praticar e se sentir confiante para seguir como Mestre Professor.
+              </p>
+            </div>
+          </div>
+
+          <div class="glass rounded-[2rem] p-8 shadow-soft" data-aos="fade-left">
+            <div class="flex flex-col items-center gap-5 text-center">
+              <img src="https://felizcomreiki.com.br/wp-content/uploads/2023/06/katia-oracao-300x300-1.jpg" alt="Kátia Maciel" class="h-64 w-64 rounded-[2rem] object-cover shadow-soft md:h-80 md:w-80" loading="lazy">
+              <blockquote class="font-serif text-2xl font-bold leading-9 text-reiki-text">
+                “Ensinar Reiki é transmitir uma prática de presença, respeito e compaixão em ação.”
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESENTES -->
+    <section class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-7xl" data-aos="fade-up">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="section-kicker">Presentes</span>
+          <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">Mais apoio para a sua caminhada como Mestre.</h2>
+          <p class="mt-6 text-lg leading-8 text-reiki-text/75">Aqui estão alguns dos presentes que serão seus quando você fizer parte dessa próxima turma.</p>
+        </div>
+        <div class="mt-10 grid gap-5 md:grid-cols-2">
+          <article class="rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6 shadow-soft"><h3 class="font-serif text-xl font-bold">Um ano de UniReiki</h3><p class="mt-3 leading-7 text-reiki-text/75">Além do programa de Mestre Reiki Usui Nível 3B, você ganha um ano de matrícula na Universidade Reiki de graça.</p></article>
+          <article class="rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6 shadow-soft"><h3 class="font-serif text-xl font-bold">Aulas ao vivo toda semana</h3><p class="mt-3 leading-7 text-reiki-text/75">Encontros comigo para tirar dúvidas, com materiais para baixar e aulas gravadas para rever quando quiser.</p></article>
+          <article class="rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6 shadow-soft"><h3 class="font-serif text-xl font-bold">Clube do Livro Holístico</h3><p class="mt-3 leading-7 text-reiki-text/75">Grupo exclusivo para estudar livros holísticos e conversar sobre seus conteúdos e temas.</p></article>
+          <article class="rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6 shadow-soft"><h3 class="font-serif text-xl font-bold">Comunidade exclusiva de reikianos</h3><p class="mt-3 leading-7 text-reiki-text/75">Comunidade secreta no Facebook para compartilhar conquistas e se relacionar com pessoas na mesma sintonia.</p></article>
+          <article class="rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6 shadow-soft"><h3 class="font-serif text-xl font-bold">E-books exclusivos</h3><p class="mt-3 leading-7 text-reiki-text/75">E-books sobre chakras, mantras, lei da atração, cristais e, claro, Reiki.</p></article>
+          <article class="rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6 shadow-soft"><h3 class="font-serif text-xl font-bold">Cursos da UniReiki</h3><p class="mt-3 leading-7 text-reiki-text/75">Cursos sobre técnicas avançadas de Reiki, Ho’oponopono, como combinar Reiki com outras terapias e muito mais.</p></article>
+          <article class="rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6 shadow-soft"><h3 class="font-serif text-xl font-bold">Meu contato direto</h3><p class="mt-3 leading-7 text-reiki-text/75">Contato direto comigo pelo WhatsApp para tirar dúvidas antes, durante e depois da sua sintonização.</p></article>
+          <article class="rounded-[1.5rem] border border-reiki-primary/20 bg-white/80 p-6 shadow-soft"><h3 class="font-serif text-xl font-bold">Programa Reiki Transforma</h3><p class="mt-3 leading-7 text-reiki-text/75">Meu programa com práticas passo a passo para ajudar você a dominar o Reiki Usui.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VAGAS LIMITADAS -->
+    <section class="bg-reiki-support px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-4xl rounded-[2.5rem] bg-white/75 p-8 text-center shadow-soft md:p-12" data-aos="fade-up">
+        <span class="section-kicker">Um aviso importante</span>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">Por que as vagas são limitadas?</h2>
+        <div class="mx-auto mt-6 max-w-3xl space-y-5 text-lg leading-8 text-reiki-text/80">
+          <p>Mas antes eu preciso te dar um aviso importante: as vagas são realmente limitadas.</p>
+          <p>Simplesmente porque eu acompanho de verdade a turma, tirando cada dúvida e pegando na mão durante todo o processo. Quem já é meu aluno sabe disso.</p>
+          <p>Eu dedico total atenção a cada turma porque o mais importante para mim é que você tenha resultados e viva o máximo de transformações.</p>
+          <p>Essas vagas vão ser para os alunos mais comprometidos, aqueles que querem realmente mudar as suas vidas. Então, se você quiser fazer parte desta turma, você precisa agir.</p>
+        </div>
+        <a href="#checkout" class="btn-primary mt-8 inline-block rounded-full px-8 py-4 text-base font-bold">Quero me inscrever enquanto há vagas</a>
+      </div>
+    </section>
+
+    <!-- BLOCO 06: AGENDA - DATAS DO CURSO -->
+    <section class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-4xl" data-aos="fade-up">
+        <div class="rounded-[2.5rem] border border-reiki-gold/30 bg-gradient-to-br from-white/80 to-reiki-support/50 p-8 md:p-12" style="background: linear-gradient(135deg, rgba(255,255,255,0.92) 0%, rgba(255,253,245,0.78) 100%);">
+          <div class="text-center">
+            <span class="section-kicker">Agenda</span>
+            <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+              Marque na sua agenda
+            </h2>
+            <p class="mt-4 text-lg leading-8 text-reiki-text/80">
+              As aulas ao vivo serão realizadas em três dias, em horário de Brasília, com prática guiada e espaço para tirar suas dúvidas.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <div class="relative overflow-hidden rounded-[2rem] border-2 border-reiki-primary/30 bg-white/90 p-8 shadow-soft">
+              <div class="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-reiki-primary/10 blur-2xl"></div>
+              <div class="relative">
+                <div class="inline-flex items-center gap-2 rounded-full bg-reiki-primary/15 px-4 py-1.5 text-sm font-bold uppercase tracking-[0.15em] text-reiki-deep">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Dia 1
+                </div>
+                <h3 class="mt-4 font-serif text-2xl font-bold text-reiki-text">Sábado, 29 de Agosto</h3>
+                <div class="mt-4 flex items-center gap-3 text-reiki-text/80">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-reiki-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span class="text-lg font-semibold">9h às 16h</span>
+                  <span class="text-sm">(Horário de Brasília)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative overflow-hidden rounded-[2rem] border-2 border-reiki-primary/30 bg-white/90 p-8 shadow-soft">
+              <div class="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-reiki-primary/10 blur-2xl"></div>
+              <div class="relative">
+                <div class="inline-flex items-center gap-2 rounded-full bg-reiki-primary/15 px-4 py-1.5 text-sm font-bold uppercase tracking-[0.15em] text-reiki-deep">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Dia 2
+                </div>
+                <h3 class="mt-4 font-serif text-2xl font-bold text-reiki-text">Domingo, 30 de Agosto</h3>
+                <div class="mt-4 flex items-center gap-3 text-reiki-text/80">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-reiki-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span class="text-lg font-semibold">9h às 13h</span>
+                  <span class="text-sm">(Horário de Brasília)</span>
+                </div>
+              </div>
+            </div>
+            <div class="relative overflow-hidden rounded-[2rem] border-2 border-reiki-primary/30 bg-white/90 p-8 shadow-soft">
+              <div class="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-reiki-primary/10 blur-2xl"></div>
+              <div class="relative">
+                <div class="inline-flex items-center gap-2 rounded-full bg-reiki-primary/15 px-4 py-1.5 text-sm font-bold uppercase tracking-[0.15em] text-reiki-deep">Dia 3</div>
+                <h3 class="mt-4 font-serif text-2xl font-bold text-reiki-text">Sábado, 05 de Setembro</h3>
+                <div class="mt-4 flex items-center gap-3 text-reiki-text/80"><span class="text-lg font-semibold">9h às 16h</span><span class="text-sm">(Horário de Brasília)</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 06: CTA - O CONVITE -->
+    <section id="checkout" class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-5xl rounded-[2.5rem] border border-reiki-primary/25 bg-white/80 p-8 text-center shadow-soft md:p-12" data-aos="zoom-in">
+        <span class="font-bold uppercase tracking-[0.22em] text-reiki-deep">O convite</span>
+        <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
+          Aceite o chamado para se tornar Mestre Professor de Reiki.
+        </h2>
+        <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-reiki-text/80">
+          Se você sente que chegou o momento de ensinar, sintonizar e levar o Reiki adiante, o Reiki Nível 3B pode ser um marco na sua jornada. Você aprende, integra e pratica junto comigo para aplicar cada técnica com segurança e confiança.
+        </p>
+
+        <div class="mx-auto mt-10 max-w-md">
+          <div id="checkout-loading" class="rounded-[2rem] bg-reiki-support p-8">
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-reiki-deep">Preparando seu checkout...</p>
+          </div>
+
+          <div id="checkout-br" class="hidden rounded-[2rem] border border-reiki-primary/25 bg-reiki-support p-8">
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-reiki-deep">Condição especial para alunos da Kátia</p>
+            <p class="mt-5 text-lg font-bold text-reiki-text/65 line-through">R$ 1.997,00</p>
+            <p class="mt-1 font-serif text-5xl font-bold text-reiki-text">R$ 1.397,90</p>
+            <p class="mt-3 text-sm font-bold text-reiki-deep">30% de desconto exclusivo para meus alunos</p>
+            <a href="https://pag.felizcomreiki.com.br/pay/reiki-3b-aluno-v" class="btn-primary mt-6 block rounded-full px-6 py-4 text-base font-bold">
+              Quero garantir minha vaga com 30% de desconto
+            </a>
+          </div>
+
+          <div id="checkout-eu" class="hidden rounded-[2rem] border border-reiki-primary/25 bg-reiki-support p-8">
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-reiki-deep">Condição especial para alunos da Kátia</p>
+            <p class="mt-5 text-lg font-bold text-reiki-text/65 line-through">R$ 1.997,00</p>
+            <p class="mt-1 font-serif text-5xl font-bold text-reiki-text">R$ 1.397,90</p>
+            <p class="mt-3 text-sm font-bold text-reiki-deep">30% de desconto exclusivo para meus alunos</p>
+            <a href="https://pag.felizcomreiki.com.br/pay/reiki-3b-aluno-v" class="btn-primary mt-6 block rounded-full px-6 py-4 text-base font-bold">
+              Quero garantir minha vaga com 30% de desconto
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOCO 07: PERGUNTAS FREQUENTES -->
+    <section class="px-6 py-16 lg:px-8">
+      <div class="mx-auto max-w-5xl">
+        <div class="rounded-[2.5rem] bg-white/75 p-8 shadow-soft md:p-10" data-aos="fade-up">
+          <div class="mx-auto max-w-3xl text-center">
+            <span class="section-kicker">Perguntas frequentes</span>
+            <h3 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-4xl">
+              O que você precisa saber antes de entrar.
+            </h3>
+          </div>
+
+          <div class="mx-auto mt-10 max-w-4xl space-y-4">
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">Preciso já ter feito os níveis anteriores?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75">
+                Sim. Para realizar o Reiki Nível 3B, é necessário já possuir pelo menos o Reiki Nível 2.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">O que muda no Nível 3B?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75">
+                No 3B, você se prepara para ser Mestre Professor: aprofunda as técnicas, aprende a sintonizar em Reiki Usui Ryoho, Reiki Usui/Holy Fire® III - Online World Peace e Reiki Essencial Tibetano, e desenvolve segurança para ensinar Reiki.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">A quem se destina essa mentoria?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75">
+                Esse curso pode ser realizado por qualquer pessoa que já possua pelo menos o Reiki Nível 2. Mas quem já tem o nível 3 também pode participar.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">O curso é ao vivo e online?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75">
+                Sim. As aulas desta turma acontecem ao vivo e online no sábado, 29 de agosto, das 9h às 16h; no domingo, 30 de agosto, das 9h às 13h; e no sábado, 05 de setembro, das 9h às 16h, sempre no horário de Brasília.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">Receberei certificado?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75">
+                Sim. Após concluir o processo do curso, você receberá seu certificado conforme as orientações da formação.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-6">
+              <button class="faq-question flex w-full items-center justify-between gap-4 text-left">
+                <span class="font-serif text-xl font-bold">O Reiki substitui tratamentos de saúde?</span>
+                <span class="faq-icon text-3xl text-reiki-deep transition">+</span>
+              </button>
+              <div class="faq-answer mt-4 leading-7 text-reiki-text/75">
+                Não. O Reiki é uma prática complementar e não substitui tratamentos médicos, psicológicos ou terapêuticos.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Floating Button -->
+  <div
+    id="whatsappButton"
+    class="whatsapp-float fixed bottom-6 right-6 z-50 flex flex-col items-center md:bottom-24"
+  >
+    <a
+      href="https://wa.me/31657854330?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Curso%20de%20Reiki%20N%C3%ADvel%203B%20da%20K%C3%A1tia..."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar com suporte pelo WhatsApp"
+      class="flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+        <path d="M16.04 3C9.43 3 4.06 8.35 4.06 14.93c0 2.1.55 4.15 1.6 5.95L4 29l8.33-1.63a12.05 12.05 0 0 0 5.72 1.45h.01C24.66 28.82 30 23.47 30 16.89 30 10.34 22.65 3 16.04 3Zm7.03 17.1c-.3.84-1.74 1.6-2.4 1.7-.62.09-1.4.13-2.25-.14-.52-.16-1.18-.38-2.03-.75-3.57-1.54-5.9-5.12-6.08-5.36-.18-.24-1.45-1.92-1.45-3.66 0-1.74.92-2.6 1.25-2.95.33-.36.72-.45.96-.45h.69c.22 0 .52-.08.81.62.3.72 1.03 2.5 1.12 2.68.09.18.15.39.03.63-.12.24-.18.39-.36.6-.18.21-.38.47-.54.63-.18.18-.37.38-.16.74.21.36.94 1.54 2.02 2.5 1.39 1.24 2.56 1.62 2.92 1.8.36.18.57.15.78-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.69.42.09.15.09.87-.21 1.71Z"/>
+      </svg>
+    </a>
+    <span class="whatsapp-label">Dúvidas? clique aqui</span>
+  </div>
+
+  <!-- Footer Padronizado -->
+  <footer class="border-t border-reiki-primary/20 px-6 py-8 text-center text-xs text-gray-500">
+    <div class="mx-auto max-w-6xl">
+      <p class="mb-3">© <span id="year"></span> Feliz com Reiki. Todos os direitos reservados.</p>
+      <p class="leading-6">
+        <a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/politica-de-privacidade/">Políticas de privacidade</a>
+        <span> | </span>
+        <a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/termos-de-uso/">Termos de uso</a>
+        <span> | </span>
+        <a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/aviso-legal/">Aviso Legal</a>
+        <span> | </span>
+        <a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/politica-de-privacidade/">Políticas de Cookies do Site</a>
+        <span> | </span>
+        <a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/contato/">Contato</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 750,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 80
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const whatsappButton = document.getElementById('whatsappButton');
+    const checkoutSection = document.getElementById('checkout');
+
+    function toggleWhatsAppButton() {
+      if (!checkoutSection) return;
+
+      const checkoutRect = checkoutSection.getBoundingClientRect();
+      const checkoutVisible = checkoutRect.top <= window.innerHeight && checkoutRect.bottom >= 0;
+
+      if (checkoutVisible) {
+        whatsappButton.classList.add('show');
+      } else {
+        whatsappButton.classList.remove('show');
+      }
+    }
+
+    window.addEventListener('scroll', toggleWhatsAppButton, { passive: true });
+    window.addEventListener('resize', toggleWhatsAppButton);
+
+    document.querySelectorAll('.faq-question').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        item.classList.toggle('open');
+      });
+    });
+
+    const checkoutBR = document.getElementById('checkout-br');
+    const checkoutEU = document.getElementById('checkout-eu');
+    const checkoutLoading = document.getElementById('checkout-loading');
+
+    function showCheckout(countryCode) {
+      checkoutLoading.classList.add('hidden');
+
+      if (countryCode === 'BR') {
+        checkoutBR.classList.remove('hidden');
+        checkoutEU.classList.add('hidden');
+      } else {
+        checkoutEU.classList.remove('hidden');
+        checkoutBR.classList.add('hidden');
+      }
+    }
+
+    async function getCountryFromCloudflare() {
+      const response = await fetch('https://cloudflare.com/cdn-cgi/trace', { cache: 'no-store' });
+      if (!response.ok) throw new Error('Cloudflare trace unavailable');
+
+      const text = await response.text();
+      const lines = text.split('\n');
+      const locationLine = lines.find((line) => line.startsWith('loc='));
+      if (!locationLine) throw new Error('Country not found in Cloudflare trace');
+
+      return locationLine.replace('loc=', '').trim();
+    }
+
+    async function getCountryFromIpApi() {
+      const response = await fetch('https://ipapi.co/json/', { cache: 'no-store' });
+      if (!response.ok) throw new Error('ipapi fallback unavailable');
+
+      const data = await response.json();
+      return data && data.country_code ? data.country_code : 'EU';
+    }
+
+    async function detectCountryAndShowCheckout() {
+      try {
+        const country = await getCountryFromCloudflare();
+        showCheckout(country);
+      } catch (cloudflareError) {
+        try {
+          const country = await getCountryFromIpApi();
+          showCheckout(country);
+        } catch (ipapiError) {
+          showCheckout('EU');
+        }
+      }
+    }
+
+    detectCountryAndShowCheckout();
+    toggleWhatsAppButton();
+  </script>
+</body>
+</html>
