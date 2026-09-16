@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="https://felizcomreiki.com.br/wp-content/uploads/2021/12/LOGO-QUADRADO-PEQUENO-150X150.png" />
   <title>Laboratório de Percepção Energética para Reikianos | Feliz com Reiki</title>
-  <meta name="description" content="Um dia ao vivo de prática, experimentação, troca e orientação com a Mestra Kátia Maciel para reikianos que desejam aplicar Reiki com mais confiança." />
+  <meta name="description" content="Um dia de prática guiada para você observar melhor o que acontece durante uma aplicação, compreender com mais cuidado o que percebe e ganhar mais segurança para praticar Reiki." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,19 +22,21 @@
           },
           colors: {
             reiki: {
-              primary: '#8A6CCF',
-              support: '#F7F2FC',
-              deep: '#62459E',
-              darker: '#3E2D60',
-              soft: '#FEFCFF',
-              warm: '#F1DFC9',
-              sage: '#DDE9DF',
-              text: '#34294A'
+              ink: '#163F40',
+              deep: '#07585B',
+              teal: '#087B7E',
+              turquoise: '#18A6A7',
+              aqua: '#DDF3F0',
+              mist: '#EEF8F5',
+              pearl: '#FBFCF8',
+              gold: '#D9B84C',
+              'gold-deep': '#856817'
             }
           },
           boxShadow: {
-            soft: '0 18px 45px rgba(98, 69, 158, 0.11)',
-            glow: '0 22px 70px rgba(138, 108, 207, 0.23)'
+            soft: '0 18px 50px rgba(7, 88, 91, 0.10)',
+            glow: '0 26px 80px rgba(7, 88, 91, 0.20)',
+            gold: '0 16px 36px rgba(133, 104, 23, 0.24)'
           }
         }
       }
@@ -44,107 +46,172 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
+    :root {
+      --color-teal-950: #063f42;
+      --color-teal-900: #07585b;
+      --color-teal-700: #087b7e;
+      --color-turquoise: #18a6a7;
+      --color-aqua: #ddf3f0;
+      --color-mist: #eef8f5;
+      --color-pearl: #fbfcf8;
+      --color-white: #ffffff;
+      --color-gold: #d9b84c;
+      --color-gold-deep: #856817;
+      --color-ink: #163f40;
+      --color-muted: #517071;
+      --shadow-soft: 0 18px 50px rgba(7, 88, 91, 0.10);
+      --shadow-glow: 0 26px 80px rgba(7, 88, 91, 0.20);
+    }
+
     html,
     body {
       overflow-x: hidden;
     }
 
     body {
+      margin: 0;
       font-family: 'Lato', sans-serif;
-      color: #34294A;
-      background:
-        radial-gradient(circle at top left, rgba(138,108,207,0.18), transparent 34rem),
-        radial-gradient(circle at 92% 11%, rgba(241,223,201,0.30), transparent 28rem),
-        linear-gradient(180deg, #FEFCFF 0%, #F7F2FC 48%, #FEFCFF 100%);
+      color: var(--color-ink);
+      background: var(--color-pearl);
     }
 
     .font-serif { font-family: 'Playfair Display', serif; }
 
-    .practice-pattern {
+    .page-shell {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .page-shell::before {
+      position: fixed;
+      z-index: -1;
+      inset: 0;
+      content: "";
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 8% 4%, rgba(24, 166, 167, 0.12), transparent 27rem),
+        radial-gradient(circle at 94% 14%, rgba(217, 184, 76, 0.10), transparent 22rem);
+    }
+
+    .section-pad {
+      padding: 5rem 1.25rem;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      color: var(--color-teal-700);
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .copy p + p {
+      margin-top: 1rem;
+    }
+
+    .copy-narrow {
+      max-width: 49rem;
+    }
+
+    .soft-panel {
+      border: 1px solid rgba(8, 123, 126, 0.16);
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-pattern,
+    .teal-pattern {
       position: relative;
       overflow: hidden;
     }
 
-    .practice-pattern::before {
-      content: "";
+    .hero-pattern::before,
+    .teal-pattern::before {
       position: absolute;
       inset: 0;
-      background-image:
-        radial-gradient(circle at 18% 20%, rgba(138,108,207,0.15) 0 3px, transparent 3px),
-        radial-gradient(circle at 84% 27%, rgba(98,69,158,0.11) 0 4px, transparent 4px),
-        radial-gradient(circle at 42% 86%, rgba(221,233,223,0.55) 0 4px, transparent 4px);
-      background-size: 96px 96px, 144px 144px, 118px 118px;
+      content: "";
       pointer-events: none;
+      background-image:
+        radial-gradient(circle at 13% 24%, rgba(255, 255, 255, 0.46) 0 2px, transparent 2px),
+        radial-gradient(circle at 84% 31%, rgba(217, 184, 76, 0.24) 0 2px, transparent 2px);
+      background-size: 74px 74px, 112px 112px;
+      opacity: 0.48;
     }
 
-    .glass {
-      background: rgba(255, 255, 255, 0.78);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(255,255,255,0.88);
+    .hero-image-frame {
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.86);
+      background: rgba(255, 255, 255, 0.62);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .hero-image-frame::after {
+      position: absolute;
+      z-index: -1;
+      right: -1.1rem;
+      bottom: -1.1rem;
+      width: 44%;
+      height: 44%;
+      border-right: 2px solid var(--color-gold);
+      border-bottom: 2px solid var(--color-gold);
+      border-radius: 0 0 2rem 0;
+      content: "";
     }
 
     .btn-primary {
-      background: #8A6CCF;
-      color: #ffffff;
-      transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
-      box-shadow: 0 14px 30px rgba(138,108,207,0.32);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3.65rem;
+      border: 1px solid #e2c763;
+      border-radius: 999px;
+      background: var(--color-gold);
+      color: #263c36;
+      font-weight: 900;
+      letter-spacing: 0.015em;
+      box-shadow: 0 16px 36px rgba(133, 104, 23, 0.24);
+      transition: transform 0.22s ease, background-color 0.22s ease, box-shadow 0.22s ease;
     }
 
     .btn-primary:hover {
-      background: #7255B7;
       transform: translateY(-2px);
-      box-shadow: 0 18px 38px rgba(138,108,207,0.38);
-    }
-
-    .btn-soft {
-      background: rgba(255,255,255,0.82);
-      border: 1px solid rgba(138,108,207,0.25);
-      transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .btn-soft:hover {
-      background: #ffffff;
-      transform: translateY(-2px);
-      box-shadow: 0 14px 28px rgba(98,69,158,0.10);
+      background: #e5c85b;
+      box-shadow: 0 20px 42px rgba(133, 104, 23, 0.30);
     }
 
     .btn-primary:focus-visible,
-    .btn-soft:focus-visible,
     .faq-question:focus-visible,
     .whatsapp-link:focus-visible,
     a:focus-visible {
-      outline: 3px solid rgba(98,69,158,0.55);
+      outline: 3px solid rgba(24, 166, 167, 0.62);
       outline-offset: 4px;
     }
 
-    .section-kicker {
-      letter-spacing: 0.20em;
-      text-transform: uppercase;
-      color: #62459E;
-      font-weight: 900;
-      font-size: 0.78rem;
+    .quote-card {
+      border-left: 3px solid var(--color-gold);
     }
 
-    .experience-card {
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    .stage-card,
+    .bonus-card,
+    .included-card {
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
     }
 
-    .experience-card:hover {
+    .stage-card:hover,
+    .bonus-card:hover,
+    .included-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 20px 45px rgba(98,69,158,0.11);
-      border-color: rgba(138,108,207,0.38);
+      border-color: rgba(8, 123, 126, 0.34);
+      box-shadow: var(--shadow-soft);
     }
 
-    .flow-step:not(:last-child)::after {
-      content: "→";
-      display: none;
-      position: absolute;
-      right: -1rem;
-      top: 50%;
-      color: #8A6CCF;
-      font-size: 1.4rem;
-      font-weight: 900;
-      transform: translateY(-50%);
+    .stage-number {
+      color: rgba(8, 123, 126, 0.19);
+      font-family: 'Playfair Display', serif;
+      font-size: 3.4rem;
+      font-weight: 800;
+      line-height: 1;
     }
 
     .faq-answer { display: none; }
@@ -167,19 +234,29 @@
     .whatsapp-label {
       margin-top: 0.45rem;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.96);
       padding: 0.35rem 0.65rem;
+      color: var(--color-teal-950);
       font-size: 0.72rem;
       font-weight: 800;
       line-height: 1.1;
-      color: #3E2D60;
       text-align: center;
-      box-shadow: 0 10px 24px rgba(98,69,158,0.15);
       white-space: nowrap;
+      box-shadow: var(--shadow-soft);
+    }
+
+    @media (min-width: 640px) {
+      .section-pad { padding: 6rem 1.5rem; }
     }
 
     @media (min-width: 1024px) {
-      .flow-step:not(:last-child)::after { display: block; }
+      .section-pad { padding: 7rem 2rem; }
+    }
+
+    @media (max-width: 639px) {
+      .hero-image-frame::after { right: -0.55rem; bottom: -0.55rem; }
+      .whatsapp-label { display: none; }
+      .whatsapp-link { width: 3rem !important; height: 3rem !important; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -195,483 +272,286 @@
 </head>
 
 <body class="antialiased">
-  <!-- BLOCO 1 — HERO -->
-  <header class="practice-pattern relative">
-    <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-14 sm:px-6 md:grid-cols-2 md:py-24 lg:px-8">
-      <div data-aos="fade-right">
-        <p class="mb-4 inline-flex rounded-full border border-reiki-primary/30 bg-white/80 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-reiki-deep sm:text-sm">
-          Laboratório de Percepção Energética para Reikianos
-        </p>
-
-        <h1 class="font-serif text-4xl font-bold leading-tight text-reiki-text sm:text-5xl lg:text-6xl">
-          Pare de se perguntar se você está fazendo Reiki certo.
-        </h1>
-
-        <!-- TODO APÓS PESQUISA: revisar subheadline com base nas respostas reais -->
-        <p class="mt-6 text-lg leading-8 text-reiki-text/80 md:text-xl">
-          Um dia para praticar, observar o que acontece nas aplicações e levar suas dúvidas para uma experiência orientada pela Mestra Kátia.
-        </p>
-
-        <div class="mt-8 grid gap-3 sm:grid-cols-3">
-          <div class="rounded-2xl bg-white/80 p-4 shadow-soft">
-            <svg class="h-7 w-7 text-reiki-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 11V7a2 2 0 114 0v4m0-2a2 2 0 114 0v3m0-1a2 2 0 114 0v3c0 4.4-3.6 8-8 8h-1a8 8 0 01-7.2-4.5L2 14.2a2 2 0 013.5-1.9L8 16V11z" />
-            </svg>
-            <p class="mt-2 text-sm font-bold text-reiki-text">Prática ao vivo</p>
+  <div class="page-shell">
+    <!-- HERO -->
+    <header class="hero-pattern bg-reiki-mist">
+      <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-14 sm:px-6 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-24">
+        <div data-aos="fade-right">
+          <p class="mb-5 inline-flex rounded-full border border-reiki-teal/20 bg-white/80 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-reiki-deep sm:text-sm">Laboratório de Percepção Energética para Reikianos</p>
+          <h1 class="font-serif text-4xl font-bold leading-[1.08] text-reiki-ink sm:text-5xl lg:text-6xl xl:text-7xl">Pare de se perguntar se você está fazendo Reiki certo.</h1>
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-reiki-ink/80 sm:text-xl">Um dia de prática guiada para você observar melhor o que acontece durante uma aplicação, compreender com mais cuidado o que percebe e ganhar mais segurança para praticar Reiki.</p>
+          <p class="mt-5 max-w-2xl text-base font-bold leading-7 text-reiki-deep sm:text-lg">Mesmo que hoje você sinta pouco. Não sinta nada. Ou já perceba algumas coisas, mas ainda duvide do que está sentindo.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <time datetime="2026-09-26" class="rounded-full bg-reiki-deep px-5 py-2.5 text-sm font-black text-white">26 de setembro de 2026</time>
+            <span class="rounded-full border border-reiki-teal/20 bg-white/85 px-5 py-2.5 text-sm font-bold text-reiki-deep">Ao vivo e online • Zoom</span>
           </div>
-          <div class="rounded-2xl bg-white/80 p-4 shadow-soft">
-            <svg class="h-7 w-7 text-reiki-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a4 4 0 00-5-3.87M17 20H7m10 0v-2c0-1.05-.27-2.04-.76-2.9M7 20H2v-2a4 4 0 015-3.87M7 20v-2c0-1.05.27-2.04.76-2.9m8.48 0a5 5 0 00-8.48 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            <p class="mt-2 text-sm font-bold text-reiki-text">Troca entre reikianos</p>
-          </div>
-          <div class="rounded-2xl bg-white/80 p-4 shadow-soft">
-            <svg class="h-7 w-7 text-reiki-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8.2 9a4 4 0 117.6 1.7c-.6 1.1-1.8 1.6-2.7 2.4-.7.6-1.1 1.2-1.1 2.4M12 19h.01" />
-            </svg>
-            <p class="mt-2 text-sm font-bold text-reiki-text">Orientação da Kátia</p>
-          </div>
+          <a href="#oferta" class="btn-primary mt-8 w-full px-8 py-4 text-center text-sm uppercase sm:w-auto sm:text-base">Quero participar do Laboratório</a>
+          <p class="mt-5 text-sm leading-6 text-reiki-ink/70">Para reikianos a partir do Nível 1, com diferentes níveis de experiência.</p>
         </div>
 
-        <div class="mt-8">
-          <a href="#oferta" class="btn-primary inline-flex w-full items-center justify-center rounded-full px-8 py-4 text-center text-base font-bold sm:w-auto">
-            Quero participar do Laboratório
-          </a>
-        </div>
-
-        <p class="mt-5 flex items-center gap-2 text-sm font-bold leading-6 text-reiki-text/70">
-          <span class="h-2.5 w-2.5 rounded-full bg-reiki-deep" aria-hidden="true"></span>
-          Experiência ao vivo, prática e criada para reikianos.
-        </p>
-      </div>
-
-      <div class="relative pb-8" data-aos="fade-left">
-        <div class="absolute -left-6 -top-6 h-28 w-28 rounded-full bg-reiki-primary/20 blur-2xl" aria-hidden="true"></div>
-        <div class="absolute -bottom-6 -right-6 h-36 w-36 rounded-full bg-reiki-warm/60 blur-3xl" aria-hidden="true"></div>
-
-        <!-- TODO: substituir por imagem oficial do Laboratório -->
-        <div class="relative overflow-hidden rounded-[2rem] border border-white/90 bg-white/70 p-3 shadow-glow backdrop-blur">
-          <img
-            src="https://felizcomreiki.com.br/wp-content/uploads/2019/01/maos-dadas.jpg"
-            alt="Mãos unidas durante uma prática, representando a troca e a experimentação no Laboratório"
-            class="h-[390px] w-full rounded-[1.5rem] object-cover object-center sm:h-[460px]"
-          />
-        </div>
-
-        <div class="glass absolute bottom-0 left-4 right-4 rounded-[1.5rem] p-5 shadow-soft sm:left-7 sm:right-7">
-          <p class="text-xs font-black uppercase tracking-[0.18em] text-reiki-deep">Um espaço para experimentar</p>
-          <p class="mt-2 text-sm leading-6 text-reiki-text/80 sm:text-base">
-            Pratique, compare experiências, faça perguntas e receba orientação enquanto vive o processo.
-          </p>
+        <div class="relative mx-auto w-full max-w-xl pb-3 pr-3" data-aos="fade-left">
+          <div class="absolute -left-8 -top-8 h-36 w-36 rounded-full bg-reiki-turquoise/20 blur-3xl" aria-hidden="true"></div>
+          <div class="absolute -bottom-5 right-0 h-32 w-32 rounded-full bg-reiki-gold/20 blur-3xl" aria-hidden="true"></div>
+          <figure class="hero-image-frame relative rounded-[2rem] p-2.5 sm:p-3">
+            <img src="imagens/laboratorio-quadrado.jpg" alt="Arte do Laboratório de Percepção Energética para Reikianos" class="aspect-square w-full rounded-[1.55rem] object-cover" width="810" height="810" fetchpriority="high" />
+          </figure>
         </div>
       </div>
+    </header>
+
+    <main>
+      <!-- IDENTIFICAÇÃO -->
+      <section class="section-pad">
+        <div class="mx-auto max-w-6xl">
+          <div class="mx-auto max-w-4xl text-center" data-aos="fade-up">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="quote-card rounded-2xl bg-reiki-mist p-6 text-left font-serif text-2xl font-bold text-reiki-ink sm:p-7">“Eu não sinto nada.”</div>
+              <div class="quote-card rounded-2xl bg-white p-6 text-left font-serif text-2xl font-bold text-reiki-ink shadow-soft sm:p-7">“Será que estou fazendo Reiki certo?”</div>
+            </div>
+          </div>
+          <div class="copy copy-narrow mx-auto mt-10 text-lg leading-8 text-reiki-ink/80" data-aos="fade-up">
+            <p>Eu escuto muito essas duas frases.</p>
+            <p>E talvez você já tenha pensado exatamente isso durante ou depois de uma aplicação.</p>
+            <p>Talvez coloque as mãos e não perceba praticamente nada.</p>
+            <p>Ou perceba calor, frio, formigamento, pulsação… mas logo venha a dúvida:</p>
+            <p class="font-serif text-2xl font-bold text-reiki-ink">“Será que isso significa alguma coisa ou eu estou imaginando?”</p>
+            <p>E quando outra pessoa conta que sentiu algo muito forte, a comparação começa.</p>
+            <p>“Por que eu não sinto assim?”</p>
+            <p>“Será que o Reiki está funcionando?”</p>
+            <p>“Será que eu sou capaz?”</p>
+            <p>Só que <strong>percepção não é uma competição</strong>.</p>
+            <p>Você não precisa ter uma experiência extraordinária para praticar Reiki.</p>
+            <p>O que faz diferença é aprender a prestar atenção na sua própria experiência, reconhecer o que acontece durante uma aplicação e construir referências que tragam mais segurança para a sua prática.</p>
+            <p class="font-bold text-reiki-deep">Foi para isso que eu criei este Laboratório.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIÊNCIA PRÁTICA -->
+      <section class="section-pad bg-reiki-mist">
+        <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div data-aos="fade-right">
+            <span class="section-kicker">Prática guiada</span>
+            <h2 class="mt-4 font-serif text-3xl font-bold leading-tight text-reiki-ink sm:text-4xl lg:text-5xl">Você não vai passar o dia apenas me ouvindo falar sobre Reiki.</h2>
+            <p class="mt-6 font-serif text-3xl font-bold text-reiki-teal">Você vai praticar Reiki.</p>
+          </div>
+          <div class="copy rounded-[2rem] bg-white p-7 text-lg leading-8 text-reiki-ink/80 shadow-soft sm:p-10" data-aos="fade-left">
+            <p>Vai fazer exercícios.</p><p>Observar o que acontece nas suas mãos.</p><p>Aplicar.</p><p>Experimentar.</p><p>Comparar experiências.</p><p>Trazer suas dúvidas.</p>
+            <p>E receber minha orientação enquanto tudo isso está acontecendo.</p>
+            <p>Porque uma coisa é assistir alguém explicar percepção energética.</p>
+            <p>Outra bem diferente é estar praticando e poder perguntar naquele momento:</p>
+            <p class="font-serif text-2xl font-bold text-reiki-ink">“Kátia, eu senti isso aqui. E agora?”</p>
+            <p>Ou até:</p>
+            <p class="font-serif text-2xl font-bold text-reiki-ink">“Eu não senti praticamente nada. O que eu observo?”</p>
+            <p>É essa experiência que quero proporcionar para você.</p>
+            <div class="mt-7 grid gap-2 font-bold text-reiki-deep sm:grid-cols-3"><p>Sem pressão para sentir.</p><p>Sem competição.</p><p>Sem tentar adivinhar doenças ou transformar sensações em diagnósticos.</p></div>
+            <a href="#oferta" class="btn-primary mt-8 w-full px-8 py-4 text-center text-sm uppercase sm:w-auto sm:text-base">Quero praticar com você</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- MANHÃ E TARDE -->
+      <section class="section-pad">
+        <div class="mx-auto max-w-7xl">
+          <div class="mx-auto max-w-3xl text-center" data-aos="fade-up"><span class="section-kicker">O dia de prática</span><h2 class="mt-4 font-serif text-4xl font-bold text-reiki-ink sm:text-5xl">O que vamos fazer nesse dia?</h2></div>
+          <div class="mt-12 grid gap-7 lg:grid-cols-2">
+            <article class="soft-panel rounded-[2rem] p-7 sm:p-9" data-aos="fade-up">
+              <h3 class="font-serif text-3xl font-bold text-reiki-ink">Pela manhã, você vai explorar a sua percepção</h3>
+              <div class="copy mt-6 text-lg leading-8 text-reiki-ink/80">
+                <p>Vamos começar com exercícios simples para você prestar atenção ao que acontece durante a prática sem tentar forçar uma sensação.</p>
+                <p>Vamos trabalhar percepção entre as mãos, aproximação e afastamento, calor, frio, formigamento, pulsação, pressão, diferenças entre regiões, Byosen, Reiji-ho, preparação, limpeza, proteção energética e autocuidado do reikiano.</p>
+                <p>Mas o objetivo não é decorar o significado de cada sensação.</p>
+                <p>É começar a <strong>perceber e diferenciar</strong>.</p>
+              </div>
+            </article>
+            <article class="rounded-[2rem] border border-reiki-teal/15 bg-reiki-aqua p-7 shadow-soft sm:p-9" data-aos="fade-up" data-aos-delay="90">
+              <h3 class="font-serif text-3xl font-bold text-reiki-ink">À tarde, a percepção entra na prática</h3>
+              <div class="copy mt-6 text-lg leading-8 text-reiki-ink/80">
+                <p>É aqui que o Laboratório ganha ainda mais vida.</p><p>Você vai aplicar Reiki e observar o que acontece durante a experiência.</p><p>Uma região chamou mais a sua atenção?</p><p>Você quase não percebeu diferença?</p><p>Sentiu alguma coisa e não sabe o que fazer com aquilo?</p><p>Vamos observar.</p><p>Conversar.</p><p>Comparar experiências.</p><p>E trabalhar o que fazer durante a aplicação sem transformar percepção em diagnóstico.</p><p>A ideia é você começar a perceber que não precisa ter todas as respostas.</p><p>Mas pode aprender a <strong>observar melhor e responder com mais segurança ao que acontece durante a prática</strong>.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEIS ETAPAS -->
+      <section class="section-pad bg-reiki-deep text-white">
+        <div class="mx-auto max-w-7xl">
+          <div class="mx-auto max-w-3xl text-center" data-aos="fade-up"><span class="text-xs font-black uppercase tracking-[0.22em] text-reiki-gold">A experiência</span><h2 class="mt-4 font-serif text-4xl font-bold sm:text-5xl">É assim que vamos trabalhar</h2></div>
+          <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="stage-card rounded-[1.75rem] border border-white/15 bg-white/10 p-7" data-aos="fade-up"><span class="stage-number text-white/20">01</span><h3 class="mt-3 font-serif text-2xl font-bold">Perceber</h3><p class="mt-3 leading-7 text-white/75">Notar o que realmente acontece, sem ansiedade e sem tentar fabricar uma sensação.</p></article>
+            <article class="stage-card rounded-[1.75rem] border border-white/15 bg-white/10 p-7" data-aos="fade-up" data-aos-delay="50"><span class="stage-number text-white/20">02</span><h3 class="mt-3 font-serif text-2xl font-bold">Diferenciar</h3><p class="mt-3 leading-7 text-white/75">Reconhecer que calor, frio, pulsação, formigamento, pressão ou simplesmente pouca percepção são experiências diferentes.</p></article>
+            <article class="stage-card rounded-[1.75rem] border border-white/15 bg-white/10 p-7" data-aos="fade-up" data-aos-delay="100"><span class="stage-number text-white/20">03</span><h3 class="mt-3 font-serif text-2xl font-bold">Experimentar</h3><p class="mt-3 leading-7 text-white/75">Sair da teoria e colocar tudo em prática.</p></article>
+            <article class="stage-card rounded-[1.75rem] border border-white/15 bg-white/10 p-7" data-aos="fade-up"><span class="stage-number text-white/20">04</span><h3 class="mt-3 font-serif text-2xl font-bold">Interpretar com cuidado</h3><p class="mt-3 leading-7 text-white/75">Observar aquilo que percebe dentro da prática do Reiki e do Byosen, sem transformar sensação em diagnóstico.</p></article>
+            <article class="stage-card rounded-[1.75rem] border border-white/15 bg-white/10 p-7" data-aos="fade-up" data-aos-delay="50"><span class="stage-number text-white/20">05</span><h3 class="mt-3 font-serif text-2xl font-bold">Responder</h3><p class="mt-3 leading-7 text-white/75">Entender o que você pode fazer quando uma região chama mais a sua atenção durante a aplicação.</p></article>
+            <article class="stage-card rounded-[1.75rem] border border-reiki-gold/50 bg-reiki-gold p-7 text-reiki-ink shadow-gold" data-aos="fade-up" data-aos-delay="100"><span class="stage-number">06</span><h3 class="mt-3 font-serif text-2xl font-bold">Confiar</h3><p class="mt-3 leading-7 text-reiki-ink/80">Criar referências próprias para praticar Reiki com menos dúvida e mais segurança.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARA QUEM É -->
+      <section class="section-pad">
+        <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <div data-aos="fade-right"><span class="section-kicker">Para você</span><h2 class="mt-4 font-serif text-4xl font-bold leading-tight text-reiki-ink sm:text-5xl">E se eu quase não sentir nada?</h2><p class="mt-6 font-serif text-2xl font-bold text-reiki-teal">Então este Laboratório também é para você.</p></div>
+          <div class="copy text-lg leading-8 text-reiki-ink/80" data-aos="fade-left">
+            <p>Você não precisa chegar sabendo perceber energia.</p><p>Não precisa sentir calor.</p><p>Não precisa sentir formigamento.</p><p>Não precisa ter uma “sensibilidade especial”.</p><p>Também é para você se já percebe bastante, mas ainda:</p>
+            <ul class="mt-5 space-y-3 rounded-[1.75rem] bg-reiki-mist p-6 sm:p-8">
+              <li class="flex gap-3"><span class="font-bold text-reiki-teal">✓</span><span>fica em dúvida se está imaginando;</span></li><li class="flex gap-3"><span class="font-bold text-reiki-teal">✓</span><span>não sabe muito bem como interpretar aquilo que sente;</span></li><li class="flex gap-3"><span class="font-bold text-reiki-teal">✓</span><span>não sabe o que fazer quando uma região chama sua atenção;</span></li><li class="flex gap-3"><span class="font-bold text-reiki-teal">✓</span><span>quer aprofundar sua percepção;</span></li><li class="flex gap-3"><span class="font-bold text-reiki-teal">✓</span><span>quer confiar mais na própria prática.</span></li>
+            </ul>
+            <p>E não importa se você aplica Reiki apenas em você, em familiares e amigos ou se já atende outras pessoas.</p><p>O ponto de partida pode ser diferente.</p><p class="font-bold text-reiki-deep">A prática é justamente o que nos une nesse dia.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BÔNUS -->
+      <section id="bonus" class="section-pad bg-reiki-mist">
+        <div class="mx-auto max-w-7xl">
+          <div class="mx-auto max-w-4xl text-center" data-aos="fade-up">
+            <span class="section-kicker">Continue explorando</span>
+            <h2 class="mt-4 font-serif text-4xl font-bold leading-tight text-reiki-ink sm:text-5xl">E quando o Laboratório terminar, você ainda terá muito para explorar.</h2>
+            <div class="copy mx-auto mt-6 max-w-3xl text-lg leading-8 text-reiki-ink/80"><p>A sua inscrição não inclui apenas o nosso dia de prática.</p><p>Você também recebe uma coleção de materiais e cursos para continuar estudando e aprofundando sua caminhada no Reiki.</p><p class="font-serif text-2xl font-bold text-reiki-ink">E tem bastante coisa aqui.</p></div>
+          </div>
+
+          <div class="mt-12 grid gap-6 lg:grid-cols-2">
+            <article class="bonus-card soft-panel rounded-[2rem] p-7 sm:p-9" data-aos="fade-up">
+              <span class="section-kicker">Bônus 1</span><h3 class="mt-3 font-serif text-3xl font-bold text-reiki-ink">Biblioteca Reikiana</h3><p class="mt-5 text-lg leading-8 text-reiki-ink/80">Uma coleção de e-books e materiais que eu preparei para você consultar sempre que quiser.</p><p class="mt-5 font-bold text-reiki-deep">Entre os conteúdos que você recebe estão:</p>
+              <ul class="mt-4 space-y-3 leading-7 text-reiki-ink/80"><li><strong>Guia de Cura de Hayashi e Usui — completo e com imagens</strong></li><li><strong>Os Poemas do Imperador Meiji</strong></li><li><strong>Caixa de Reiki — Como e Por que Fazer a Sua</strong></li><li><strong>12 Dicas para Aplicar Reiki em Animais</strong></li></ul>
+              <p class="mt-5 leading-7 text-reiki-ink/75">Além de outros materiais sobre cristais, mantras, afirmações e temas relacionados às terapias energéticas.</p>
+            </article>
+
+            <article class="bonus-card soft-panel rounded-[2rem] p-7 sm:p-9" data-aos="fade-up" data-aos-delay="70">
+              <span class="section-kicker">Bônus 2</span><h3 class="mt-3 font-serif text-3xl font-bold text-reiki-ink">Clube do Audiolivro Holístico</h3>
+              <div class="copy mt-5 text-lg leading-8 text-reiki-ink/80"><p>Aqui você terá acesso às leituras comentadas que já realizamos de grandes livros ligados ao Reiki e ao desenvolvimento do praticante.</p><p>Não é apenas a leitura.</p><p>Eu comento os ensinamentos, trago reflexões e conversamos sobre aquilo que podemos levar para a nossa prática e para a nossa vida.</p><p>Entre os livros já trabalhados estão:</p></div>
+              <ul class="mt-5 space-y-2 leading-7 text-reiki-ink/75"><li><em>O Grande Livro de Símbolos do Reiki</em> — Mark Hosak e Walter Lübeck</li><li><em>Mãos de Luz</em> — Barbara Ann Brennan</li><li><em>O Grande Livro do Reiki</em> — João Magalhães</li><li><em>O Espírito do Reiki</em> — Frank Arjava Petter, Walter Lübeck e William Lee Rand</li><li><em>Reiki — Elevação da Consciência</em> — João Magalhães</li><li><em>O Toque Curativo</em> — William Lee Rand</li></ul>
+              <p class="mt-5 font-bold text-reiki-deep">E você recebe acesso ao conteúdo já realizado.</p>
+            </article>
+          </div>
+
+          <div class="mt-6 grid gap-6 lg:grid-cols-2">
+            <article class="bonus-card rounded-[2rem] border border-reiki-gold/60 bg-reiki-deep p-7 text-white shadow-glow sm:p-9" data-aos="fade-up">
+              <span class="inline-flex rounded-full bg-reiki-gold px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-reiki-ink">Bônus 3</span><h3 class="mt-5 font-serif text-3xl font-bold">Filosofia de Vida no Reiki — Viva plenamente</h3><p class="mt-4 font-bold text-reiki-gold">Curso completo • Certificado</p><p class="mt-6 text-lg leading-8 text-white/80">Um curso completo para quem quer compreender o Reiki para além da aplicação das mãos.</p><p class="mt-4 text-lg leading-8 text-white/80">Você vai encontrar estudos e práticas sobre princípios do Reiki, autotratamento, técnicas de respiração, práticas tradicionais, Tanden, limpeza energética, meditação, símbolos, envio de Reiki à distância e outros temas importantes para a vida do reikiano.</p>
+            </article>
+            <article class="bonus-card rounded-[2rem] border border-reiki-gold/60 bg-reiki-deep p-7 text-white shadow-glow sm:p-9" data-aos="fade-up" data-aos-delay="70">
+              <span class="inline-flex rounded-full bg-reiki-gold px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-reiki-ink">Bônus 4</span><h3 class="mt-5 font-serif text-3xl font-bold">Aprofundamento dos Símbolos do Reiki</h3><p class="mt-4 font-bold text-reiki-gold">Curso completo • Certificado</p><p class="mt-6 text-lg leading-8 text-white/80">Um estudo mais profundo dos símbolos e de sua utilização na prática.</p><p class="mt-4 text-lg leading-8 text-white/80">Você terá aulas sobre Cho Ku Rei, Sei He Ki, Hon Sha Ze Sho Nen, Dai Koo Myo, Dai Koo Myo Tibetano, além de símbolos não reikianos e o Kanji do Reiki.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- KÁTIA -->
+      <section id="katia" class="section-pad">
+        <div class="mx-auto max-w-6xl">
+          <div class="rounded-[2.5rem] border border-reiki-teal/15 bg-white p-7 shadow-soft sm:p-10 lg:p-14" data-aos="fade-up">
+            <div class="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+              <div>
+                <img src="https://felizcomreiki.com.br/wp-content/uploads/2026/05/katia-maos-verde.jpg" alt="Kátia Maciel" class="aspect-[4/5] w-full rounded-[1.75rem] object-cover object-top shadow-soft" loading="lazy" />
+                <span class="section-kicker mt-7">Com Kátia</span>
+                <h2 class="mt-4 font-serif text-4xl font-bold text-reiki-ink sm:text-5xl">Oi, eu sou a Kátia.</h2>
+              </div>
+              <div class="copy text-lg leading-8 text-reiki-ink/80"><p>E uma das razões pelas quais esse Laboratório é tão importante para mim é porque eu conheço essas dúvidas.</p><p>Eu também já tive insegurança sobre aquilo que sentia.</p><p>Sobre aquilo que não sentia.</p><p>Sobre estar fazendo alguma coisa errada.</p><p>Por isso eu não quero que este seja um encontro em que você fica apenas me ouvindo ensinar.</p><p>Quero praticar com você.</p><p>Quero ouvir suas dúvidas.</p><p>Quero ajudar você a observar aquilo que está acontecendo.</p><p class="font-bold text-reiki-deep">E quero que você termine esse dia com mais referências e mais segurança para continuar praticando Reiki.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESERVA -->
+      <section class="teal-pattern section-pad bg-reiki-teal text-white">
+        <div class="relative mx-auto max-w-6xl text-center" data-aos="fade-up">
+          <span class="text-xs font-black uppercase tracking-[0.22em] text-reiki-gold">Reserve este dia</span><time datetime="2026-09-26" class="mt-4 block font-serif text-4xl font-bold sm:text-6xl">26 de setembro de 2026</time><h2 class="mx-auto mt-5 max-w-4xl font-serif text-2xl font-bold sm:text-3xl">Laboratório de Percepção Energética para Reikianos</h2><p class="mt-4 text-lg text-white/80">Um dia de prática, experimentação, orientação e troca entre reikianos.</p>
+          <div class="mx-auto mt-8 grid max-w-3xl gap-4 sm:grid-cols-3"><div class="rounded-2xl border border-white/15 bg-white/10 p-5"><span class="block text-xs font-bold uppercase tracking-[0.16em] text-white/60">Horário:</span><strong class="mt-2 block text-lg">das 9:00 às 16:00</strong></div><div class="rounded-2xl border border-white/15 bg-white/10 p-5"><span class="block text-xs font-bold uppercase tracking-[0.16em] text-white/60">Formato:</span><strong class="mt-2 block text-lg">ao vivo e online</strong></div><div class="rounded-2xl border border-white/15 bg-white/10 p-5"><span class="block text-xs font-bold uppercase tracking-[0.16em] text-white/60">Plataforma:</span><strong class="mt-2 block text-lg">Zoom</strong></div></div>
+          <a href="#oferta" class="btn-primary mt-9 w-full px-8 py-4 text-center text-sm uppercase sm:w-auto sm:text-base">Quero participar do Laboratório</a>
+        </div>
+      </section>
+
+      <!-- TUDO INCLUÍDO -->
+      <section class="section-pad bg-reiki-mist">
+        <div class="mx-auto max-w-7xl">
+          <div class="mx-auto max-w-3xl text-center" data-aos="fade-up"><span class="section-kicker">A sua inscrição</span><h2 class="mt-4 font-serif text-4xl font-bold text-reiki-ink sm:text-5xl">Tudo isso está incluído na sua inscrição</h2><p class="mt-5 text-lg leading-8 text-reiki-ink/75">Você participa do <strong>Laboratório de Percepção Energética para Reikianos</strong> e ainda recebe:</p></div>
+          <div class="mt-11 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <article class="included-card soft-panel rounded-[1.6rem] p-6"><h3 class="font-serif text-xl font-bold text-reiki-ink">A vivência completa do Laboratório</h3><p class="mt-3 leading-7 text-reiki-ink/70">Um dia de prática e orientação comigo.</p></article>
+            <article class="included-card soft-panel rounded-[1.6rem] p-6"><h3 class="font-serif text-xl font-bold text-reiki-ink">A gravação do Laboratório</h3><p class="mt-3 leading-7 text-reiki-ink/70">Depois do encontro, a gravação será disponibilizada para você na área de alunos da UniReiki.</p></article>
+            <article class="included-card soft-panel rounded-[1.6rem] p-6"><h3 class="font-serif text-xl font-bold text-reiki-ink">Certificado de participação</h3></article>
+            <article class="included-card soft-panel rounded-[1.6rem] p-6"><h3 class="font-serif text-xl font-bold text-reiki-ink">Biblioteca Reikiana</h3><p class="mt-3 leading-7 text-reiki-ink/70">E-books e materiais para continuar estudando.</p></article>
+            <article class="included-card soft-panel rounded-[1.6rem] p-6"><h3 class="font-serif text-xl font-bold text-reiki-ink">Clube do Audiolivro Holístico</h3><p class="mt-3 leading-7 text-reiki-ink/70">Acesso ao acervo das leituras comentadas.</p></article>
+            <article class="included-card rounded-[1.6rem] border border-reiki-gold/60 bg-white p-6 shadow-soft"><h3 class="font-serif text-xl font-bold text-reiki-ink">Filosofia de Vida no Reiki — Viva plenamente</h3><p class="mt-3 leading-7 text-reiki-ink/70">Curso completo com certificado.</p></article>
+            <article class="included-card rounded-[1.6rem] border border-reiki-gold/60 bg-white p-6 shadow-soft md:col-span-2 lg:col-span-3"><h3 class="font-serif text-xl font-bold text-reiki-ink">Aprofundamento dos Símbolos do Reiki</h3><p class="mt-3 leading-7 text-reiki-ink/70">Curso completo com certificado.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- OFERTA -->
+      <section id="oferta" class="section-pad">
+        <div class="mx-auto max-w-5xl">
+          <div class="overflow-hidden rounded-[2.5rem] border border-reiki-gold/50 bg-reiki-deep text-white shadow-glow" data-aos="zoom-in">
+            <div class="grid lg:grid-cols-[1fr_0.9fr]">
+              <div class="p-7 sm:p-10 lg:p-12"><span class="text-xs font-black uppercase tracking-[0.22em] text-reiki-gold">Sua inscrição no Laboratório</span><h2 class="mt-4 font-serif text-3xl font-bold sm:text-4xl">Valor da vivência</h2><p class="mt-7 text-xl text-white/65"><s>R$ 397</s></p><p class="mt-1 font-serif text-6xl font-bold leading-none text-white sm:text-7xl">R$ 297</p><p class="mt-3 text-lg font-bold text-white/85">ou em 12 x R$29,80</p><p class="mt-5 inline-flex rounded-full bg-reiki-gold px-5 py-2 text-sm font-black uppercase tracking-[0.14em] text-reiki-ink">25% de desconto</p></div>
+              <div class="border-t border-white/15 bg-white/10 p-7 sm:p-10 lg:border-l lg:border-t-0 lg:p-12"><p class="text-lg leading-8 text-white/80">Você participa de toda a vivência do Laboratório, recebe a gravação, o certificado e ainda leva todos os bônus para continuar aprofundando sua prática.</p><a href="https://pag.unireiki.com.br/pay/lab-percepcao-energetica" class="btn-primary mt-8 w-full px-7 py-4 text-center text-sm uppercase sm:text-base">Quero participar do Laboratório</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONVITE -->
+      <section class="px-5 pb-20 sm:px-6 lg:px-8 lg:pb-28">
+        <div class="copy mx-auto max-w-3xl text-center text-lg leading-8 text-reiki-ink/80" data-aos="fade-up"><p>Não quero que você entre porque acha que precisa sentir mais do que outras pessoas.</p><p>Quero que você venha para <strong>conhecer melhor a sua própria forma de perceber Reiki</strong>.</p><p>Praticar.</p><p>Experimentar.</p><p>Tirar dúvidas.</p><p>E construir mais confiança a partir da sua própria experiência.</p></div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section-pad bg-reiki-mist">
+        <div class="mx-auto max-w-5xl">
+          <div class="text-center" data-aos="fade-up"><h2 class="font-serif text-4xl font-bold text-reiki-ink sm:text-5xl">Dúvidas frequentes</h2></div>
+          <div class="mt-10 space-y-4" data-aos="fade-up">
+            <article class="faq-item rounded-[1.4rem] border border-reiki-teal/15 bg-white p-5 shadow-soft sm:p-6"><button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-1"><span class="font-serif text-lg font-bold text-reiki-ink sm:text-xl">Eu quase não sinto nada. Posso participar?</span><span class="faq-icon text-3xl text-reiki-teal transition" aria-hidden="true">+</span></button><div id="faq-answer-1" class="faq-answer copy mt-4 leading-7 text-reiki-ink/75"><p>Sim.</p><p>Essa é justamente uma das situações que vamos trabalhar.</p><p>Você não precisa chegar percebendo calor, formigamento ou qualquer sensação específica.</p></div></article>
+            <article class="faq-item rounded-[1.4rem] border border-reiki-teal/15 bg-white p-5 shadow-soft sm:p-6"><button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-2"><span class="font-serif text-lg font-bold text-reiki-ink sm:text-xl">Eu já percebo bastante. Ainda vale a pena?</span><span class="faq-icon text-3xl text-reiki-teal transition" aria-hidden="true">+</span></button><div id="faq-answer-2" class="faq-answer copy mt-4 leading-7 text-reiki-ink/75"><p>Sim.</p><p>Também vamos trabalhar diferenciação, interpretação cuidadosa e como responder durante a aplicação àquilo que chama sua atenção.</p></div></article>
+            <article class="faq-item rounded-[1.4rem] border border-reiki-teal/15 bg-white p-5 shadow-soft sm:p-6"><button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-3"><span class="font-serif text-lg font-bold text-reiki-ink sm:text-xl">Preciso trabalhar como terapeuta?</span><span class="faq-icon text-3xl text-reiki-teal transition" aria-hidden="true">+</span></button><div id="faq-answer-3" class="faq-answer mt-4 leading-7 text-reiki-ink/75">Não.<br><br>Você pode aplicar Reiki somente em você, em familiares e amigos ou já atender outras pessoas.</div></article>
+            <article class="faq-item rounded-[1.4rem] border border-reiki-teal/15 bg-white p-5 shadow-soft sm:p-6"><button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-4"><span class="font-serif text-lg font-bold text-reiki-ink sm:text-xl">Qual nível de Reiki preciso ter?</span><span class="faq-icon text-3xl text-reiki-teal transition" aria-hidden="true">+</span></button><div id="faq-answer-4" class="faq-answer copy mt-4 leading-7 text-reiki-ink/75"><p><strong>Basta ter o Nível 1 de Reiki.</strong></p><p>Você não precisa ter os níveis mais avançados para participar do Laboratório.</p></div></article>
+            <article class="faq-item rounded-[1.4rem] border border-reiki-teal/15 bg-white p-5 shadow-soft sm:p-6"><button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-5"><span class="font-serif text-lg font-bold text-reiki-ink sm:text-xl">Preciso de outra pessoa comigo para fazer as práticas?</span><span class="faq-icon text-3xl text-reiki-teal transition" aria-hidden="true">+</span></button><div id="faq-answer-5" class="faq-answer copy mt-4 leading-7 text-reiki-ink/75"><p><strong>Não.</strong></p><p>Você poderá participar normalmente sem precisar ter outra pessoa ao seu lado durante o encontro.</p></div></article>
+            <article class="faq-item rounded-[1.4rem] border border-reiki-teal/15 bg-white p-5 shadow-soft sm:p-6"><button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-6"><span class="font-serif text-lg font-bold text-reiki-ink sm:text-xl">O Laboratório ficará gravado?</span><span class="faq-icon text-3xl text-reiki-teal transition" aria-hidden="true">+</span></button><div id="faq-answer-6" class="faq-answer copy mt-4 leading-7 text-reiki-ink/75"><p><strong>Sim.</strong></p><p>A gravação faz parte da vivência e será disponibilizada depois do encontro na sua área de alunos da UniReiki.</p></div></article>
+            <article class="faq-item rounded-[1.4rem] border border-reiki-teal/15 bg-white p-5 shadow-soft sm:p-6"><button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-7"><span class="font-serif text-lg font-bold text-reiki-ink sm:text-xl">O Laboratório terá certificado?</span><span class="faq-icon text-3xl text-reiki-teal transition" aria-hidden="true">+</span></button><div id="faq-answer-7" class="faq-answer copy mt-4 leading-7 text-reiki-ink/75"><p><strong>Sim.</strong></p><p>Depois da participação no Laboratório, você também terá direito ao seu certificado.</p></div></article>
+            <article class="faq-item rounded-[1.4rem] border border-reiki-teal/15 bg-white p-5 shadow-soft sm:p-6"><button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-8"><span class="font-serif text-lg font-bold text-reiki-ink sm:text-xl">Os cursos bônus também têm certificado?</span><span class="faq-icon text-3xl text-reiki-teal transition" aria-hidden="true">+</span></button><div id="faq-answer-8" class="faq-answer copy mt-4 leading-7 text-reiki-ink/75"><p>Sim.</p><p>Os cursos <strong>Filosofia de Vida no Reiki — Viva plenamente</strong> e <strong>Aprofundamento dos Símbolos do Reiki</strong> possuem certificado.</p></div></article>
+            <article class="faq-item rounded-[1.4rem] border border-reiki-teal/15 bg-white p-5 shadow-soft sm:p-6"><button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-9"><span class="font-serif text-lg font-bold text-reiki-ink sm:text-xl">Como vou receber os bônus?</span><span class="faq-icon text-3xl text-reiki-teal transition" aria-hidden="true">+</span></button><div id="faq-answer-9" class="faq-answer copy mt-4 leading-7 text-reiki-ink/75"><p>Assim que a sua inscrição for confirmada, <strong>os bônus já estarão disponíveis na sua área de alunos da UniReiki</strong>.</p><p>Ou seja: você não precisa esperar o dia do Laboratório para começar a aproveitar os conteúdos.</p></div></article>
+            <article class="faq-item rounded-[1.4rem] border border-reiki-teal/15 bg-white p-5 shadow-soft sm:p-6"><button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-10"><span class="font-serif text-lg font-bold text-reiki-ink sm:text-xl">Vamos aprender a diagnosticar doenças pela energia?</span><span class="faq-icon text-3xl text-reiki-teal transition" aria-hidden="true">+</span></button><div id="faq-answer-10" class="faq-answer copy mt-4 leading-7 text-reiki-ink/75"><p>Não.</p><p>Percepção energética não é diagnóstico.</p><p>Vamos observar aquilo que acontece durante a prática do Reiki de forma responsável.</p><p>Reiki é uma prática complementar e não substitui acompanhamento ou tratamento médico.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="section-pad">
+        <div class="teal-pattern relative mx-auto max-w-6xl overflow-hidden rounded-[2.5rem] bg-reiki-deep px-6 py-12 text-center text-white shadow-glow sm:px-10 sm:py-16" data-aos="zoom-in">
+          <div class="relative mx-auto max-w-4xl">
+            <h2 class="font-serif text-4xl font-bold leading-tight sm:text-5xl">Você não precisa terminar mais uma aplicação com a mesma dúvida.</h2><p class="mt-5 font-serif text-2xl font-bold text-reiki-gold">“Será que eu fiz Reiki certo?”</p>
+            <div class="copy mx-auto mt-7 max-w-3xl text-lg leading-8 text-white/80"><p>Talvez hoje você sinta pouco.</p><p>Talvez não sinta nada.</p><p>Talvez perceba bastante, mas continue sem confiar totalmente naquilo que percebe.</p><p>No dia <strong>26 de setembro</strong>, quero te convidar para parar de tentar descobrir tudo sozinha e simplesmente <strong>praticar comigo</strong>.</p><p>Experimentar.</p><p>Perguntar.</p><p>Observar.</p><p>E construir, na prática, mais segurança para continuar sua caminhada com o Reiki.</p></div>
+            <h3 class="mt-9 font-serif text-2xl font-bold sm:text-3xl">Laboratório de Percepção Energética para Reikianos</h3>
+            <a href="https://pag.unireiki.com.br/pay/lab-percepcao-energetica" class="btn-primary mt-8 w-full px-8 py-4 text-center text-sm uppercase sm:w-auto sm:text-base">Quero participar do Laboratório</a>
+            <p class="mt-7 font-serif text-xl font-bold">Kátia Maciel</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- WhatsApp flutuante preservado: aparece após 70% da página. -->
+    <div id="whatsappButton" class="whatsapp-float fixed bottom-5 right-4 z-50 flex flex-col items-center sm:bottom-6 sm:right-6 md:bottom-24">
+      <a href="https://wa.me/31657854330?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Laborat%C3%B3rio%20de%20Percep%C3%A7%C3%A3o%20Energ%C3%A9tica%20para%20Reikianos%20da%20K%C3%A1tia." target="_blank" rel="noopener noreferrer" aria-label="Perguntar sobre o Laboratório pelo WhatsApp" class="whatsapp-link flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl sm:h-16 sm:w-16">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.43 3 4.06 8.35 4.06 14.93c0 2.1.55 4.15 1.6 5.95L4 29l8.33-1.63a12.05 12.05 0 0 0 5.72 1.45h.01C24.66 28.82 30 23.47 30 16.89 30 10.34 22.65 3 16.04 3Zm7.03 17.1c-.3.84-1.74 1.6-2.4 1.7-.62.09-1.4.13-2.25-.14-.52-.16-1.18-.38-2.03-.75-3.57-1.54-5.9-5.12-6.08-5.36-.18-.24-1.45-1.92-1.45-3.66 0-1.74.92-2.6 1.25-2.95.33-.36.72-.45.96-.45h.69c.22 0 .52-.08.81.62.3.72 1.03 2.5 1.12 2.68.09.18.15.39.03.63-.12.24-.18.39-.36.6-.18.21-.38.47-.54.63-.18.18-.37.38-.16.74.21.36.94 1.54 2.02 2.5 1.39 1.24 2.56 1.62 2.92 1.8.36.18.57.15.78-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.69.42.09.15.09.87-.21 1.71Z"/></svg>
+      </a>
+      <span class="whatsapp-label">Dúvidas? Fale com a gente</span>
     </div>
-  </header>
 
-  <main>
-    <!-- BLOCO 2 — IDENTIFICAÇÃO -->
-    <section class="px-5 py-16 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-6xl" data-aos="fade-up">
-        <div class="mx-auto max-w-4xl text-center">
-          <span class="section-kicker">Isso também acontece com você?</span>
-          <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
-            Às vezes, a maior dúvida aparece justamente enquanto você está praticando.
-          </h2>
-          <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-reiki-text/75">
-            Você coloca as mãos, segue a prática e, ainda assim, fica tentando entender se está tudo certo. Essa insegurança não precisa ser escondida — ela pode ser trazida para um espaço de prática e orientação.
-          </p>
-        </div>
-
-        <!-- TODO APÓS PESQUISA: reorganizar as dores pela frequência real das respostas -->
-        <div class="mt-10 grid gap-5 md:grid-cols-2">
-          <article class="rounded-[2rem] border border-reiki-primary/20 bg-white/80 p-7 shadow-soft sm:p-8">
-            <p class="font-serif text-2xl font-bold text-reiki-text">“Não sinto nada.”</p>
-            <p class="mt-4 leading-7 text-reiki-text/75">
-              Talvez você perceba pouco, talvez não reconheça nenhuma sensação nas mãos ou simplesmente não saiba o que observar. O Laboratório acolhe essa experiência sem transformá-la em falta de capacidade.
-            </p>
-          </article>
-          <article class="rounded-[2rem] border border-reiki-primary/20 bg-reiki-support p-7 shadow-soft sm:p-8">
-            <p class="font-serif text-2xl font-bold text-reiki-text">“Não sei se estou fazendo certo.”</p>
-            <p class="mt-4 leading-7 text-reiki-text/75">
-              Quando não há alguém por perto para perguntar, é comum revisar cada passo e duvidar da própria prática. Aqui, suas perguntas fazem parte da experiência.
-            </p>
-          </article>
-          <article class="rounded-[2rem] border border-reiki-primary/20 bg-white/70 p-6 md:col-span-2">
-            <div class="grid gap-4 text-center text-sm font-bold text-reiki-text/70 sm:grid-cols-3 sm:text-base">
-              <p>“Será que sou capaz?”</p>
-              <p>“O que acontece comigo é normal?”</p>
-              <p>“Quero praticar sem ficar duvidando de mim.”</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOCO 3 — O QUE É O LABORATÓRIO -->
-    <section id="laboratorio" class="bg-white/70 px-5 py-16 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-7xl">
-        <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-          <div data-aos="fade-right">
-            <span class="section-kicker">O que é o Laboratório</span>
-            <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">
-              Não é mais uma aula para você assistir. É um dia para praticar Reiki.
-            </h2>
-            <div class="mt-6 space-y-4 text-lg leading-8 text-reiki-text/80">
-              <p>
-                O Laboratório é uma experiência de prática, experimentação e troca. Você participa dos exercícios, observa o que acontece, conversa sobre suas percepções e escuta outros reikianos que vivem dúvidas semelhantes.
-              </p>
-              <p>
-                Ao longo do dia, haverá espaço para perguntar diretamente à Mestra Kátia e receber orientação durante o processo — com acolhimento, clareza e respeito ao ritmo de cada participante.
-              </p>
-            </div>
-          </div>
-
-          <div class="rounded-[2.25rem] border border-reiki-primary/20 bg-reiki-support p-6 shadow-soft sm:p-8" data-aos="fade-left">
-            <p class="text-center text-sm font-black uppercase tracking-[0.18em] text-reiki-deep">A experiência acontece assim</p>
-            <ol class="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-6" aria-label="Etapas da experiência do Laboratório">
-              <li class="flow-step relative rounded-2xl bg-white/90 p-5 text-center"><span class="font-serif text-3xl font-bold text-reiki-primary">01</span><p class="mt-2 font-bold">Praticar</p></li>
-              <li class="flow-step relative rounded-2xl bg-white/90 p-5 text-center"><span class="font-serif text-3xl font-bold text-reiki-primary">02</span><p class="mt-2 font-bold">Perceber</p></li>
-              <li class="flow-step relative rounded-2xl bg-white/90 p-5 text-center"><span class="font-serif text-3xl font-bold text-reiki-primary">03</span><p class="mt-2 font-bold">Comparar</p></li>
-              <li class="flow-step relative rounded-2xl bg-white/90 p-5 text-center"><span class="font-serif text-3xl font-bold text-reiki-primary">04</span><p class="mt-2 font-bold">Perguntar</p></li>
-              <li class="flow-step relative rounded-2xl bg-white/90 p-5 text-center"><span class="font-serif text-3xl font-bold text-reiki-primary">05</span><p class="mt-2 font-bold">Receber orientação</p></li>
-              <li class="flow-step relative rounded-2xl bg-reiki-deep p-5 text-center text-white"><span class="font-serif text-3xl font-bold text-white/75">06</span><p class="mt-2 font-bold">Ganhar confiança</p></li>
-            </ol>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOCO 4 — COMO VAI FUNCIONAR O DIA -->
-    <section id="experiencia" class="px-5 py-16 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-7xl">
-        <div class="mx-auto max-w-4xl text-center" data-aos="fade-up">
-          <span class="section-kicker">Como vai funcionar</span>
-          <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">O que vamos viver juntos nesse dia</h2>
-          <p class="mt-6 text-lg leading-8 text-reiki-text/75">A experiência combina exercícios guiados, aplicação prática, observação, conversa e orientação ao longo do dia.</p>
-        </div>
-
-        <div class="mt-12 grid gap-7 lg:grid-cols-2">
-          <article class="experience-card rounded-[2.25rem] border border-reiki-primary/20 bg-white/80 p-7 shadow-soft sm:p-9" data-aos="fade-up">
-            <div class="flex items-start gap-4">
-              <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-reiki-sage text-reiki-darker">
-                <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3v2m6.36.64-1.42 1.42M21 12h-2M5 12H3m2.64-6.36 1.42 1.42M7 16a5 5 0 1110 0v1H7v-1zm1 4h8" /></svg>
-              </div>
-              <div><p class="text-xs font-black uppercase tracking-[0.18em] text-reiki-deep">Manhã</p><h3 class="mt-1 font-serif text-2xl font-bold text-reiki-text">Descobrindo sua percepção</h3></div>
-            </div>
-            <ul class="mt-7 space-y-3 leading-7 text-reiki-text/80">
-              <li class="flex gap-3"><span class="font-bold text-reiki-deep">✓</span><span>Exercícios de percepção entre as mãos, com aproximação e afastamento.</span></li>
-              <li class="flex gap-3"><span class="font-bold text-reiki-deep">✓</span><span>Observação de sensações diferentes, como calor, frio, pulsação, formigamento e pressão.</span></li>
-              <li class="flex gap-3"><span class="font-bold text-reiki-deep">✓</span><span>Contato prático com Byosen e Reiji-ho, explicados dentro da experiência.</span></li>
-              <li class="flex gap-3"><span class="font-bold text-reiki-deep">✓</span><span>Como observar sem tentar adivinhar ou diagnosticar o que a pessoa tem.</span></li>
-              <li class="flex gap-3"><span class="font-bold text-reiki-deep">✓</span><span>Conversa sobre dúvidas comuns, autocuidado e presença do Reiki na vida.</span></li>
-              <li class="flex gap-3"><span class="font-bold text-reiki-deep">✓</span><span>Práticas de limpeza, proteção e preparação da energia Reiki.</span></li>
-            </ul>
-          </article>
-
-          <article class="experience-card rounded-[2.25rem] border border-reiki-primary/20 bg-reiki-support p-7 shadow-soft sm:p-9" data-aos="fade-up" data-aos-delay="100">
-            <div class="flex items-start gap-4">
-              <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-reiki-warm/70 text-reiki-darker">
-                <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 11V7a2 2 0 114 0v4m0-2a2 2 0 114 0v3m0-1a2 2 0 114 0v3c0 4.4-3.6 8-8 8h-1a8 8 0 01-7.2-4.5L2 14.2a2 2 0 013.5-1.9L8 16V11z" /></svg>
-              </div>
-              <div><p class="text-xs font-black uppercase tracking-[0.18em] text-reiki-deep">Tarde</p><h3 class="mt-1 font-serif text-2xl font-bold text-reiki-text">Laboratório</h3></div>
-            </div>
-            <ul class="mt-7 space-y-3 leading-7 text-reiki-text/80">
-              <li class="flex gap-3"><span class="font-bold text-reiki-deep">✓</span><span>Prática de aplicação de Reiki.</span></li>
-              <li class="flex gap-3"><span class="font-bold text-reiki-deep">✓</span><span>Vivência em que uma pessoa recebe Reiki sem informar antes onde sente desconforto.</span></li>
-              <li class="flex gap-3"><span class="font-bold text-reiki-deep">✓</span><span>Observação dos pontos em que o praticante percebe necessidade de atenção.</span></li>
-              <li class="flex gap-3"><span class="font-bold text-reiki-deep">✓</span><span>Aplicação e comparação das percepções vividas pelos participantes.</span></li>
-              <li class="flex gap-3"><span class="font-bold text-reiki-deep">✓</span><span>Espaço para perguntas e orientação direta da Kátia.</span></li>
-            </ul>
-          </article>
-        </div>
-
-        <aside class="mt-8 rounded-[2rem] border-l-4 border-reiki-deep bg-white/80 p-6 shadow-soft sm:p-8" data-aos="fade-up" aria-label="Limite ético da prática">
-          <div class="grid gap-4 md:grid-cols-[auto_1fr] md:items-start">
-            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-reiki-support text-reiki-deep" aria-hidden="true">i</div>
-            <div>
-              <h3 class="font-serif text-xl font-bold text-reiki-text">Atenção e percepção, com responsabilidade</h3>
-              <p class="mt-2 leading-7 text-reiki-text/75"><strong>O treinamento não ensina diagnóstico energético.</strong> O objetivo é desenvolver atenção, percepção, prática e confiança. Reiki é uma prática complementar e não substitui cuidado médico nem o acompanhamento de outros profissionais de saúde.</p>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- BLOCO 5 — POR QUE UM LABORATÓRIO -->
-    <section class="bg-reiki-deep px-5 py-16 text-white sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-7xl">
-        <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-          <span class="text-xs font-black uppercase tracking-[0.20em] text-white/70">Por que um Laboratório</span>
-          <h2 class="mt-4 font-serif text-3xl font-bold md:text-5xl">Porque confiança também se constrói praticando.</h2>
-        </div>
-        <div class="mt-11 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <article class="rounded-[1.75rem] border border-white/20 bg-white/10 p-6" data-aos="fade-up"><p class="text-2xl" aria-hidden="true">01</p><h3 class="mt-3 font-serif text-xl font-bold">Você faz, em vez de só ouvir</h3></article>
-          <article class="rounded-[1.75rem] border border-white/20 bg-white/10 p-6" data-aos="fade-up" data-aos-delay="60"><p class="text-2xl" aria-hidden="true">02</p><h3 class="mt-3 font-serif text-xl font-bold">Compara experiências sem precisar acertar uma resposta</h3></article>
-          <article class="rounded-[1.75rem] border border-white/20 bg-white/10 p-6" data-aos="fade-up" data-aos-delay="120"><p class="text-2xl" aria-hidden="true">03</p><h3 class="mt-3 font-serif text-xl font-bold">Compartilha dúvidas que aparecem na prática</h3></article>
-          <article class="rounded-[1.75rem] border border-white/20 bg-white/10 p-6" data-aos="fade-up"><p class="text-2xl" aria-hidden="true">04</p><h3 class="mt-3 font-serif text-xl font-bold">Recebe orientação durante o processo</h3></article>
-          <article class="rounded-[1.75rem] border border-white/20 bg-white/10 p-6" data-aos="fade-up" data-aos-delay="60"><p class="text-2xl" aria-hidden="true">05</p><h3 class="mt-3 font-serif text-xl font-bold">Pergunta diretamente à Mestra Kátia</h3></article>
-          <article class="rounded-[1.75rem] border border-white/20 bg-white/10 p-6" data-aos="fade-up" data-aos-delay="120"><p class="text-2xl" aria-hidden="true">06</p><h3 class="mt-3 font-serif text-xl font-bold">Aprende também com a troca do grupo</h3></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOCO 6 — PARA QUEM É -->
-    <section class="px-5 py-16 sm:px-6 lg:px-8">
+    <footer class="border-t border-reiki-teal/15 bg-white px-5 py-8 text-center text-xs text-gray-500 sm:px-6">
       <div class="mx-auto max-w-6xl">
-        <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-          <span class="section-kicker">Para quem é</span>
-          <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">Um encontro para reikianos com experiências diferentes</h2>
-          <p class="mt-5 text-lg leading-8 text-reiki-text/75">Você não precisa atender profissionalmente. O ponto em comum é ter Reiki e querer viver um dia de prática acompanhada.</p>
-        </div>
-
-        <!-- TODO APÓS PESQUISA: revisar perfis e ordem com base nos cruzamentos do formulário -->
-        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <div class="rounded-2xl border border-reiki-primary/20 bg-white/80 p-5 font-bold shadow-soft">Reikianos que sentem pouco ou nada</div>
-          <div class="rounded-2xl border border-reiki-primary/20 bg-reiki-support p-5 font-bold shadow-soft">Quem se pergunta se está fazendo certo</div>
-          <div class="rounded-2xl border border-reiki-primary/20 bg-white/80 p-5 font-bold shadow-soft">Quem quer criar mais espaço para praticar</div>
-          <div class="rounded-2xl border border-reiki-primary/20 bg-reiki-support p-5 font-bold shadow-soft">Quem busca mais confiança na aplicação</div>
-          <div class="rounded-2xl border border-reiki-primary/20 bg-white/80 p-5 font-bold shadow-soft">Quem aplica Reiki apenas em si</div>
-          <div class="rounded-2xl border border-reiki-primary/20 bg-reiki-support p-5 font-bold shadow-soft">Quem aplica em familiares ou amigos</div>
-          <div class="rounded-2xl border border-reiki-primary/20 bg-white/80 p-5 font-bold shadow-soft sm:col-span-2 lg:col-span-3">Quem atende ou deseja atender outras pessoas</div>
-        </div>
+        <p class="mb-3">© <span id="year"></span> Feliz com Reiki. Todos os direitos reservados.</p>
+        <p class="leading-6"><a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/politica-de-privacidade/">Políticas de privacidade</a><span> | </span><a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/termos-de-uso/">Termos de uso</a><span> | </span><a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/aviso-legal/">Aviso Legal</a><span> | </span><a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/politica-de-privacidade/">Políticas de Cookies do Site</a><span> | </span><a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/contato/">Contato</a></p>
       </div>
-    </section>
-
-    <!-- BLOCO 7 — BÔNUS 1 -->
-    <section class="bg-white/70 px-5 py-16 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-7xl">
-        <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div data-aos="fade-right">
-            <span class="inline-flex rounded-full bg-reiki-warm/60 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-reiki-darker">Bônus 1</span>
-            <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">Estrutura de um Atendimento Eficaz</h2>
-            <p class="mt-6 text-lg leading-8 text-reiki-text/75">Um guia prático para organizar o atendimento do início ao fim, lidar com situações que podem surgir e conduzir cada etapa com mais clareza.</p>
-            <div class="mt-8 rounded-[2rem] border border-reiki-primary/20 bg-reiki-support p-6 shadow-soft">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-reiki-deep">Fluxo do atendimento</p>
-              <p class="mt-4 font-serif text-xl font-bold leading-9 text-reiki-text">recepção → conversa inicial → aplicação → encerramento → feedback</p>
-            </div>
-          </div>
-
-          <div class="space-y-5" data-aos="fade-left">
-            <div class="rounded-[2rem] border border-reiki-primary/20 bg-white/80 p-7 shadow-soft">
-              <h3 class="font-serif text-2xl font-bold text-reiki-text">A estrutura que será trabalhada</h3>
-              <ul class="mt-5 grid gap-3 text-reiki-text/75 sm:grid-cols-2">
-                <li>• Preparação pessoal</li><li>• Preparação do ambiente</li><li>• Início da sessão</li><li>• Conversa e entrevista</li><li>• Situações inesperadas</li><li>• Encerramento</li><li>• Feedback</li><li>• Relatório final</li>
-              </ul>
-            </div>
-            <div class="rounded-[2rem] border border-reiki-primary/20 bg-reiki-support p-7 shadow-soft">
-              <h3 class="font-serif text-2xl font-bold text-reiki-text">Situações para pensar e praticar</h3>
-              <ol class="mt-5 space-y-3 leading-7 text-reiki-text/75">
-                <li><strong>1.</strong> A pessoa está extremamente ansiosa.</li>
-                <li><strong>2.</strong> A pessoa fala durante toda a sessão.</li>
-                <li><strong>3.</strong> A pessoa começa a chorar.</li>
-                <li><strong>4.</strong> A pessoa diz: “Não senti absolutamente nada.”</li>
-                <li><strong>5.</strong> A pessoa pergunta: “Você viu alguma coisa na minha energia?”</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOCO 8 — BÔNUS 2 -->
-    <section class="px-5 py-16 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-6xl rounded-[2.5rem] border border-reiki-primary/20 bg-gradient-to-br from-reiki-support to-white/80 p-7 shadow-soft sm:p-10 lg:p-12" data-aos="fade-up">
-        <div class="grid gap-8 md:grid-cols-[auto_1fr] md:items-center">
-          <div class="flex h-20 w-20 items-center justify-center rounded-[1.75rem] bg-reiki-primary text-3xl font-black text-white" aria-hidden="true">+2</div>
-          <div>
-            <span class="section-kicker">Bônus 2</span>
-            <h2 class="mt-3 font-serif text-3xl font-bold text-reiki-text md:text-4xl">Tratamento em grupo com a Mestra Kátia</h2>
-            <p class="mt-4 max-w-4xl text-lg leading-8 text-reiki-text/75">A Kátia realizará uma sessão em grupo voltada à limpeza e à energização dos participantes, proporcionando uma experiência coletiva de Reiki em um ambiente acolhedor.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOCO 9 — KÁTIA -->
-    <section class="bg-reiki-support px-5 py-16 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-7xl">
-        <div class="grid gap-10 md:grid-cols-[1.08fr_0.92fr] md:items-center">
-          <div data-aos="fade-right">
-            <span class="section-kicker">Prática com orientação</span>
-            <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">Quem é a Mestra Kátia Maciel?</h2>
-            <div class="mt-6 space-y-5 text-lg leading-8 text-reiki-text/80">
-              <p>Kátia Maciel é Mestra de Reiki, terapeuta holística credenciada pela ABRATH, criadora do Feliz com Reiki e autora dos livros <strong>Combine Reiki com Outras Terapias</strong> e <strong>O Segredo dos Chakras para a Abundância</strong>.</p>
-              <p>No Laboratório, ela estará presente para orientar as práticas, acolher as perguntas e ajudar cada participante a observar sua experiência com mais clareza e responsabilidade.</p>
-              <p>Sua condução une experiência, proximidade e direção prática, criando espaço para que as dúvidas possam aparecer e ser trabalhadas enquanto o Reiki acontece.</p>
-            </div>
-          </div>
-
-          <div class="glass rounded-[2rem] p-7 shadow-soft" data-aos="fade-left">
-            <img src="https://felizcomreiki.com.br/wp-content/uploads/2023/06/katia-oracao-300x300-1.jpg" alt="Mestra de Reiki Kátia Maciel" class="mx-auto h-64 w-64 rounded-[2rem] object-cover shadow-soft md:h-80 md:w-80" loading="lazy">
-            <div class="mx-auto mt-6 max-w-sm rounded-2xl bg-white/70 p-5 text-center">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-reiki-deep">Durante o Laboratório</p>
-              <p class="mt-2 leading-7 text-reiki-text/75">Você poderá levar suas perguntas diretamente para a Kátia e receber orientação durante as práticas.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOCO 10 — AGENDA -->
-    <section class="px-5 py-16 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-5xl" data-aos="fade-up">
-        <div class="rounded-[2.5rem] border border-reiki-primary/20 bg-white/80 p-7 shadow-soft sm:p-10 md:p-12">
-          <div class="text-center">
-            <span class="section-kicker">Agenda</span>
-            <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">Reserve este dia para praticar</h2>
-            <p class="mt-4 text-lg leading-8 text-reiki-text/75">Uma experiência ao vivo planejada para ocupar um dia inteiro ou quase inteiro.</p>
-          </div>
-          <div class="mx-auto mt-9 max-w-2xl rounded-[2rem] border-2 border-reiki-primary/25 bg-reiki-support p-7 text-center sm:p-9">
-            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-reiki-primary/20 text-reiki-deep">
-              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 3v4m8-4v4M4 10h16M5 5h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V6a1 1 0 011-1z" /></svg>
-            </div>
-            <p class="mt-5 text-xs font-black uppercase tracking-[0.18em] text-reiki-deep">Data planejada</p>
-            <time datetime="2026-09-26" class="mt-2 block font-serif text-3xl font-bold text-reiki-text sm:text-4xl">26 de setembro de 2026</time>
-            <!-- TODO: confirmar horário oficial -->
-            <p class="mt-4 font-bold text-reiki-text/70">Horário: a confirmar</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOCO 11 — OFERTA / PREÇO -->
-    <section id="oferta" class="bg-white/70 px-5 py-16 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-6xl">
-        <div class="mx-auto max-w-3xl text-center" data-aos="fade-up">
-          <span class="section-kicker">Escolha sua opção</span>
-          <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-5xl">Participe do Laboratório</h2>
-          <p class="mt-5 text-lg leading-8 text-reiki-text/75">O valor depende da sua relação com a Kátia e a UniReiki.</p>
-        </div>
-        <div class="mx-auto mt-11 grid max-w-5xl gap-6 md:grid-cols-2">
-          <article class="rounded-[2.25rem] border-2 border-reiki-primary/30 bg-reiki-support p-7 shadow-soft sm:p-9" data-aos="fade-up">
-            <p class="text-sm font-black uppercase tracking-[0.16em] text-reiki-deep">Sou aluno ou ex-aluno</p>
-            <p class="mt-5 font-serif text-5xl font-bold text-reiki-text">R$ 197</p>
-            <p class="mt-4 leading-7 text-reiki-text/70">Valor destinado a alunos e ex-alunos.</p>
-            <!-- TODO: inserir link de checkout para alunos/ex-alunos -->
-            <a href="#LINK_ALUNO" class="btn-primary mt-7 block rounded-full px-7 py-4 text-center font-bold">Quero participar como aluno</a>
-          </article>
-          <article class="rounded-[2.25rem] border border-reiki-primary/20 bg-white/90 p-7 shadow-soft sm:p-9" data-aos="fade-up" data-aos-delay="100">
-            <p class="text-sm font-black uppercase tracking-[0.16em] text-reiki-deep">Público geral</p>
-            <p class="mt-5 font-serif text-5xl font-bold text-reiki-text">R$ 297</p>
-            <p class="mt-4 leading-7 text-reiki-text/70">Valor para reikianos do público geral.</p>
-            <!-- TODO: inserir link de checkout para público geral -->
-            <a href="#LINK_PUBLICO" class="btn-soft mt-7 block rounded-full px-7 py-4 text-center font-bold text-reiki-deep">Quero participar</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOCO 12 — FAQ -->
-    <section class="px-5 py-16 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-5xl">
-        <div class="rounded-[2.5rem] bg-white/80 p-6 shadow-soft sm:p-8 md:p-10" data-aos="fade-up">
-          <div class="mx-auto max-w-3xl text-center">
-            <span class="section-kicker">Perguntas frequentes</span>
-            <h2 class="mt-4 font-serif text-3xl font-bold text-reiki-text md:text-4xl">O que você precisa saber</h2>
-          </div>
-          <div class="mx-auto mt-10 max-w-4xl space-y-4">
-            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-5 sm:p-6">
-              <button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-1"><span class="font-serif text-lg font-bold sm:text-xl">Preciso ser reikiano para participar?</span><span class="faq-icon text-3xl text-reiki-deep transition" aria-hidden="true">+</span></button>
-              <div id="faq-answer-1" class="faq-answer mt-4 leading-7 text-reiki-text/75">Sim. O Laboratório foi criado para pessoas que já são reikianas.</div>
-            </div>
-            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-5 sm:p-6">
-              <button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-2"><span class="font-serif text-lg font-bold sm:text-xl">Qual nível de Reiki preciso ter?</span><span class="faq-icon text-3xl text-reiki-deep transition" aria-hidden="true">+</span></button>
-              <!-- TODO: confirmar nível mínimo exato -->
-              <div id="faq-answer-2" class="faq-answer mt-4 leading-7 text-reiki-text/75">O nível mínimo para participação ainda será confirmado.</div>
-            </div>
-            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-5 sm:p-6">
-              <button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-3"><span class="font-serif text-lg font-bold sm:text-xl">E se eu não sentir nada durante as aplicações?</span><span class="faq-icon text-3xl text-reiki-deep transition" aria-hidden="true">+</span></button>
-              <div id="faq-answer-3" class="faq-answer mt-4 leading-7 text-reiki-text/75">Você continua fazendo parte do público do Laboratório. Não sentir sensações nas mãos não será tratado como falha. A proposta é praticar, observar, fazer perguntas e receber orientação sem prometer uma experiência igual para todos.</div>
-            </div>
-            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-5 sm:p-6">
-              <button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-4"><span class="font-serif text-lg font-bold sm:text-xl">O Laboratório é só para terapeutas?</span><span class="faq-icon text-3xl text-reiki-deep transition" aria-hidden="true">+</span></button>
-              <div id="faq-answer-4" class="faq-answer mt-4 leading-7 text-reiki-text/75">Não. A experiência não é exclusiva para terapeutas; ela é destinada a reikianos.</div>
-            </div>
-            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-5 sm:p-6">
-              <button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-5"><span class="font-serif text-lg font-bold sm:text-xl">Posso participar mesmo aplicando Reiki apenas em mim?</span><span class="faq-icon text-3xl text-reiki-deep transition" aria-hidden="true">+</span></button>
-              <div id="faq-answer-5" class="faq-answer mt-4 leading-7 text-reiki-text/75">Sim. Quem pratica Reiki apenas em si também faz parte do público do Laboratório.</div>
-            </div>
-            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-5 sm:p-6">
-              <button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-6"><span class="font-serif text-lg font-bold sm:text-xl">Preciso de outra pessoa comigo para praticar?</span><span class="faq-icon text-3xl text-reiki-deep transition" aria-hidden="true">+</span></button>
-              <!-- TODO: confirmar necessidade de parceiro de prática -->
-              <div id="faq-answer-6" class="faq-answer mt-4 leading-7 text-reiki-text/75">A necessidade de ter outra pessoa presente para as práticas ainda será confirmada.</div>
-            </div>
-            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-5 sm:p-6">
-              <button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-7"><span class="font-serif text-lg font-bold sm:text-xl">O encontro é ao vivo e online?</span><span class="faq-icon text-3xl text-reiki-deep transition" aria-hidden="true">+</span></button>
-              <!-- TODO: confirmar plataforma do encontro -->
-              <div id="faq-answer-7" class="faq-answer mt-4 leading-7 text-reiki-text/75">Sim. O encontro será ao vivo e online. A plataforma ainda será confirmada.</div>
-            </div>
-            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-5 sm:p-6">
-              <button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-8"><span class="font-serif text-lg font-bold sm:text-xl">Haverá gravação?</span><span class="faq-icon text-3xl text-reiki-deep transition" aria-hidden="true">+</span></button>
-              <!-- TODO: confirmar se haverá gravação -->
-              <div id="faq-answer-8" class="faq-answer mt-4 leading-7 text-reiki-text/75">A disponibilidade de gravação ainda será confirmada.</div>
-            </div>
-            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-5 sm:p-6">
-              <button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-9"><span class="font-serif text-lg font-bold sm:text-xl">Receberei certificado?</span><span class="faq-icon text-3xl text-reiki-deep transition" aria-hidden="true">+</span></button>
-              <!-- TODO: confirmar se haverá certificado -->
-              <div id="faq-answer-9" class="faq-answer mt-4 leading-7 text-reiki-text/75">A emissão de certificado ainda será confirmada.</div>
-            </div>
-            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-5 sm:p-6">
-              <button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-10"><span class="font-serif text-lg font-bold sm:text-xl">O Laboratório ensina diagnóstico energético?</span><span class="faq-icon text-3xl text-reiki-deep transition" aria-hidden="true">+</span></button>
-              <div id="faq-answer-10" class="faq-answer mt-4 leading-7 text-reiki-text/75">Não. O treinamento desenvolve atenção, percepção, prática e confiança, sem ensinar diagnóstico energético. Reiki é uma prática complementar e não substitui cuidado médico nem o acompanhamento de outros profissionais de saúde.</div>
-            </div>
-            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-5 sm:p-6">
-              <button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-11"><span class="font-serif text-lg font-bold sm:text-xl">Como funciona o tratamento em grupo?</span><span class="faq-icon text-3xl text-reiki-deep transition" aria-hidden="true">+</span></button>
-              <div id="faq-answer-11" class="faq-answer mt-4 leading-7 text-reiki-text/75">A Mestra Kátia realizará uma sessão coletiva voltada à limpeza e à energização dos participantes, proporcionando uma experiência de Reiki em grupo, sem promessas médicas.</div>
-            </div>
-            <div class="faq-item rounded-[1.5rem] border border-reiki-primary/20 bg-reiki-support p-5 sm:p-6">
-              <button type="button" class="faq-question flex w-full items-center justify-between gap-4 text-left" aria-expanded="false" aria-controls="faq-answer-12"><span class="font-serif text-lg font-bold sm:text-xl">Como sei se tenho direito ao valor de aluno/ex-aluno?</span><span class="faq-icon text-3xl text-reiki-deep transition" aria-hidden="true">+</span></button>
-              <!-- TODO: confirmar critério operacional de aluno/ex-aluno -->
-              <div id="faq-answer-12" class="faq-answer mt-4 leading-7 text-reiki-text/75">O critério de validação do valor para alunos e ex-alunos ainda será confirmado.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLOCO 13 — CTA FINAL -->
-    <section class="px-5 pb-20 pt-6 sm:px-6 lg:px-8">
-      <div class="practice-pattern relative mx-auto max-w-6xl overflow-hidden rounded-[2.75rem] bg-reiki-darker px-6 py-12 text-center text-white shadow-glow sm:px-10 md:py-16" data-aos="zoom-in">
-        <div class="relative mx-auto max-w-4xl">
-          <span class="text-xs font-black uppercase tracking-[0.20em] text-white/70">Um dia de prática e troca</span>
-          <h2 class="mt-4 font-serif text-3xl font-bold md:text-5xl">Traga suas dúvidas para perto da prática.</h2>
-          <p class="mx-auto mt-6 max-w-3xl text-lg leading-8 text-white/80">Pratique com outros reikianos, observe sua experiência e conte com a orientação da Kátia ao longo do Laboratório.</p>
-          <a href="#oferta" class="mt-8 inline-flex w-full items-center justify-center rounded-full bg-white px-8 py-4 font-bold text-reiki-darker shadow-soft transition hover:-translate-y-0.5 sm:w-auto">Quero participar do Laboratório</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- WhatsApp flutuante: aparece após 70% da página -->
-  <div id="whatsappButton" class="whatsapp-float fixed bottom-5 right-4 z-50 flex flex-col items-center sm:bottom-6 sm:right-6 md:bottom-24">
-    <a href="https://wa.me/31657854330?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Laborat%C3%B3rio%20de%20Percep%C3%A7%C3%A3o%20Energ%C3%A9tica%20para%20Reikianos%20da%20K%C3%A1tia." target="_blank" rel="noopener noreferrer" aria-label="Perguntar sobre o Laboratório pelo WhatsApp" class="whatsapp-link flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl sm:h-16 sm:w-16">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.43 3 4.06 8.35 4.06 14.93c0 2.1.55 4.15 1.6 5.95L4 29l8.33-1.63a12.05 12.05 0 0 0 5.72 1.45h.01C24.66 28.82 30 23.47 30 16.89 30 10.34 22.65 3 16.04 3Zm7.03 17.1c-.3.84-1.74 1.6-2.4 1.7-.62.09-1.4.13-2.25-.14-.52-.16-1.18-.38-2.03-.75-3.57-1.54-5.9-5.12-6.08-5.36-.18-.24-1.45-1.92-1.45-3.66 0-1.74.92-2.6 1.25-2.95.33-.36.72-.45.96-.45h.69c.22 0 .52-.08.81.62.3.72 1.03 2.5 1.12 2.68.09.18.15.39.03.63-.12.24-.18.39-.36.6-.18.21-.38.47-.54.63-.18.18-.37.38-.16.74.21.36.94 1.54 2.02 2.5 1.39 1.24 2.56 1.62 2.92 1.8.36.18.57.15.78-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.69.42.09.15.09.87-.21 1.71Z"/></svg>
-    </a>
-    <span class="whatsapp-label">Dúvidas? Fale com a gente</span>
+    </footer>
   </div>
-
-  <!-- Footer padronizado -->
-  <footer class="border-t border-reiki-primary/20 px-5 py-8 text-center text-xs text-gray-500 sm:px-6">
-    <div class="mx-auto max-w-6xl">
-      <p class="mb-3">© <span id="year"></span> Feliz com Reiki. Todos os direitos reservados.</p>
-      <p class="leading-6">
-        <a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/politica-de-privacidade/">Políticas de privacidade</a><span> | </span>
-        <a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/termos-de-uso/">Termos de uso</a><span> | </span>
-        <a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/aviso-legal/">Aviso Legal</a><span> | </span>
-        <a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/politica-de-privacidade/">Políticas de Cookies do Site</a><span> | </span>
-        <a class="hover:text-reiki-deep" href="https://felizcomreiki.com.br/contato/">Contato</a>
-      </p>
-    </div>
-  </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     if (window.AOS && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 70 });
+      AOS.init({ duration: 650, easing: 'ease-out-cubic', once: true, offset: 60 });
     }
 
     document.getElementById('year').textContent = new Date().getFullYear();
-
     const whatsappButton = document.getElementById('whatsappButton');
 
     function toggleWhatsAppButton() {
